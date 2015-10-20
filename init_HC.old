@@ -1,0 +1,3431 @@
+/**
+ * Converted with Arma2MapConverter v0.5.1-beta
+ *
+ * Source: C:\Users\granQ\Documents\Arma 3 - Other Profiles\Granquist\missions\amob_hc.sfp_sturko\mission.sqm
+ * Date: 2015-03-05 19:50
+ */
+
+_westHQ = createCenter west;
+_eastHQ = createCenter east;
+_guerHQ = createCenter resistance;
+_civHQ  = createCenter civilian;
+_emptyHQ = createCenter civilian;
+
+
+_createdUnits = [];
+_createdMarkers = [];
+_createdTriggers = [];
+
+/*******************
+ * MARKER CREATION *
+ *******************/
+
+/*****************
+ * EMPTY VEHICLE CREATION *
+ *****************/
+
+/*****************
+ * UNIT CREATION *
+ *****************/
+// group _group_east_1
+_group_east_1 = createGroup _eastHQ;
+// begin autogen_aebeb4a7645347e99e1ea6b956a75f11, part of group _group_east_1
+if (true) then
+{
+	autogen_aebeb4a7645347e99e1ea6b956a75f11 = _group_east_1 createUnit ["sfp_rus_marksman", [5779.7163, 3097.342, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_aebeb4a7645347e99e1ea6b956a75f11) then {
+		autogen_aebeb4a7645347e99e1ea6b956a75f11 = createVehicle ["sfp_rus_marksman", [5779.7163, 3097.342, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_aebeb4a7645347e99e1ea6b956a75f11, _group_east_1] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_aebeb4a7645347e99e1ea6b956a75f11 setDir -36.860497;
+	autogen_aebeb4a7645347e99e1ea6b956a75f11 setUnitAbility 0.60000002;
+	autogen_aebeb4a7645347e99e1ea6b956a75f11 setRank "PRIVATE";
+	if(true) then { _group_east_1 selectLeader autogen_aebeb4a7645347e99e1ea6b956a75f11; };
+	_createdUnits = _createdUnits + [autogen_aebeb4a7645347e99e1ea6b956a75f11];
+};
+// end of autogen_aebeb4a7645347e99e1ea6b956a75f11
+// begin autogen_b40398e04d3e4a449b269483af0ddc48, part of group _group_east_1
+if (true) then
+{
+	autogen_b40398e04d3e4a449b269483af0ddc48 = _group_east_1 createUnit ["sfp_rus_rifleman_gl", [5775.686, 3093.7756, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_b40398e04d3e4a449b269483af0ddc48) then {
+		autogen_b40398e04d3e4a449b269483af0ddc48 = createVehicle ["sfp_rus_rifleman_gl", [5775.686, 3093.7756, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_b40398e04d3e4a449b269483af0ddc48, _group_east_1] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_b40398e04d3e4a449b269483af0ddc48 setDir -36.860497;
+	autogen_b40398e04d3e4a449b269483af0ddc48 setUnitAbility 0.60000002;
+	autogen_b40398e04d3e4a449b269483af0ddc48 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_b40398e04d3e4a449b269483af0ddc48];
+};
+// end of autogen_b40398e04d3e4a449b269483af0ddc48
+// begin autogen_eeff6ade8e854f2a849c56424ff1a6cb, part of group _group_east_1
+if (true) then
+{
+	autogen_eeff6ade8e854f2a849c56424ff1a6cb = _group_east_1 createUnit ["sfp_rus_rifleman_gl", [5782.8374, 3092.9377, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_eeff6ade8e854f2a849c56424ff1a6cb) then {
+		autogen_eeff6ade8e854f2a849c56424ff1a6cb = createVehicle ["sfp_rus_rifleman_gl", [5782.8374, 3092.9377, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_eeff6ade8e854f2a849c56424ff1a6cb, _group_east_1] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_eeff6ade8e854f2a849c56424ff1a6cb setDir -28.426706;
+	autogen_eeff6ade8e854f2a849c56424ff1a6cb setUnitAbility 0.60000002;
+	autogen_eeff6ade8e854f2a849c56424ff1a6cb setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_eeff6ade8e854f2a849c56424ff1a6cb];
+};
+// end of autogen_eeff6ade8e854f2a849c56424ff1a6cb
+// begin autogen_034654ec7cd544c2acbd82e6e6850652, part of group _group_east_1
+if (true) then
+{
+	autogen_034654ec7cd544c2acbd82e6e6850652 = _group_east_1 createUnit ["sfp_rus_medic", [5778.9497, 3089.262, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_034654ec7cd544c2acbd82e6e6850652) then {
+		autogen_034654ec7cd544c2acbd82e6e6850652 = createVehicle ["sfp_rus_medic", [5778.9497, 3089.262, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_034654ec7cd544c2acbd82e6e6850652, _group_east_1] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_034654ec7cd544c2acbd82e6e6850652 setDir -36.860497;
+	autogen_034654ec7cd544c2acbd82e6e6850652 setUnitAbility 0.60000002;
+	autogen_034654ec7cd544c2acbd82e6e6850652 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_034654ec7cd544c2acbd82e6e6850652];
+};
+// end of autogen_034654ec7cd544c2acbd82e6e6850652
+// begin autogen_fb81036b3f4642ebbaefea3e4cd48e15, part of group _group_east_1
+if (true) then
+{
+	autogen_fb81036b3f4642ebbaefea3e4cd48e15 = _group_east_1 createUnit ["sfp_rus_at_rpg7", [5786.2964, 3088.3635, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_fb81036b3f4642ebbaefea3e4cd48e15) then {
+		autogen_fb81036b3f4642ebbaefea3e4cd48e15 = createVehicle ["sfp_rus_at_rpg7", [5786.2964, 3088.3635, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_fb81036b3f4642ebbaefea3e4cd48e15, _group_east_1] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_fb81036b3f4642ebbaefea3e4cd48e15 setDir -28.426706;
+	autogen_fb81036b3f4642ebbaefea3e4cd48e15 setUnitAbility 0.60000002;
+	autogen_fb81036b3f4642ebbaefea3e4cd48e15 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_fb81036b3f4642ebbaefea3e4cd48e15];
+};
+// end of autogen_fb81036b3f4642ebbaefea3e4cd48e15
+// begin autogen_358d648572c0492f89ae8a09c8eb26a5, part of group _group_east_1
+if (true) then
+{
+	autogen_358d648572c0492f89ae8a09c8eb26a5 = _group_east_1 createUnit ["sfp_rus_at_rpg7", [5781.1206, 3085.7268, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_358d648572c0492f89ae8a09c8eb26a5) then {
+		autogen_358d648572c0492f89ae8a09c8eb26a5 = createVehicle ["sfp_rus_at_rpg7", [5781.1206, 3085.7268, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_358d648572c0492f89ae8a09c8eb26a5, _group_east_1] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_358d648572c0492f89ae8a09c8eb26a5 setDir -36.860497;
+	autogen_358d648572c0492f89ae8a09c8eb26a5 setUnitAbility 0.60000002;
+	autogen_358d648572c0492f89ae8a09c8eb26a5 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_358d648572c0492f89ae8a09c8eb26a5];
+};
+// end of autogen_358d648572c0492f89ae8a09c8eb26a5
+
+/**
+ * Waypoints for group _group_east_1
+ */
+// waypoint #1
+_wp = _group_east_1 addWaypoint[[5836.0894, 2975.0339, 0], 100, 1];
+[_group_east_1, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_1, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_1, 1] setWaypointCompletionRadius 0;
+[_group_east_1, 1] setWaypointFormation "NO CHANGE";
+[_group_east_1, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_1, 1] setWaypointStatements["true", ""];
+[_group_east_1, 1] setWaypointType "CYCLE";
+// group _group_east_2
+_group_east_2 = createGroup _eastHQ;
+// begin autogen_c096393beaf7477c9e87b881a3500670, part of group _group_east_2
+if (true) then
+{
+	autogen_c096393beaf7477c9e87b881a3500670 = _group_east_2 createUnit ["sfp_t72", [5685.2251, 2856.1882, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_c096393beaf7477c9e87b881a3500670) then {
+		autogen_c096393beaf7477c9e87b881a3500670 = createVehicle ["sfp_t72", [5685.2251, 2856.1882, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_c096393beaf7477c9e87b881a3500670, _group_east_2] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_c096393beaf7477c9e87b881a3500670 setDir 34.511528;
+	autogen_c096393beaf7477c9e87b881a3500670 setUnitAbility 0.60000002;
+	autogen_c096393beaf7477c9e87b881a3500670 setRank "PRIVATE";
+	if(true) then { _group_east_2 selectLeader autogen_c096393beaf7477c9e87b881a3500670; };
+	_createdUnits = _createdUnits + [autogen_c096393beaf7477c9e87b881a3500670];
+};
+// end of autogen_c096393beaf7477c9e87b881a3500670
+// begin autogen_6c38537e3ba5411682cfa06480a17f3f, part of group _group_east_2
+if (true) then
+{
+	autogen_6c38537e3ba5411682cfa06480a17f3f = _group_east_2 createUnit ["sfp_t72", [5666.3882, 2867.8894, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_6c38537e3ba5411682cfa06480a17f3f) then {
+		autogen_6c38537e3ba5411682cfa06480a17f3f = createVehicle ["sfp_t72", [5666.3882, 2867.8894, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_6c38537e3ba5411682cfa06480a17f3f, _group_east_2] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_6c38537e3ba5411682cfa06480a17f3f setDir 34.511528;
+	autogen_6c38537e3ba5411682cfa06480a17f3f setUnitAbility 0.60000002;
+	autogen_6c38537e3ba5411682cfa06480a17f3f setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_6c38537e3ba5411682cfa06480a17f3f];
+};
+// end of autogen_6c38537e3ba5411682cfa06480a17f3f
+// begin autogen_e5e062438e7949c5b859dffaf26ff0f7, part of group _group_east_2
+if (true) then
+{
+	autogen_e5e062438e7949c5b859dffaf26ff0f7 = _group_east_2 createUnit ["sfp_t72", [5695.4106, 2849.1829, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_e5e062438e7949c5b859dffaf26ff0f7) then {
+		autogen_e5e062438e7949c5b859dffaf26ff0f7 = createVehicle ["sfp_t72", [5695.4106, 2849.1829, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_e5e062438e7949c5b859dffaf26ff0f7, _group_east_2] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_e5e062438e7949c5b859dffaf26ff0f7 setDir 34.511528;
+	autogen_e5e062438e7949c5b859dffaf26ff0f7 setUnitAbility 0.60000002;
+	autogen_e5e062438e7949c5b859dffaf26ff0f7 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_e5e062438e7949c5b859dffaf26ff0f7];
+};
+// end of autogen_e5e062438e7949c5b859dffaf26ff0f7
+
+/**
+ * Waypoints for group _group_east_2
+ */
+// waypoint #1
+_wp = _group_east_2 addWaypoint[[5698.9771, 2884.5969, 0], 0, 1];
+[_group_east_2, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_2, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_2, 1] setWaypointCompletionRadius 0;
+[_group_east_2, 1] setWaypointFormation "COLUMN";
+[_group_east_2, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_2, 1] setWaypointStatements["true", ""];
+[_group_east_2, 1] setWaypointType "GUARD";
+// group _group_east_3
+_group_east_3 = createGroup _eastHQ;
+// begin autogen_0147f779d1ce4973a3a6c698763eb8e6, part of group _group_east_3
+if (true) then
+{
+	autogen_0147f779d1ce4973a3a6c698763eb8e6 = _group_east_3 createUnit ["sfp_zsu", [5764.7295, 2990.0996, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_0147f779d1ce4973a3a6c698763eb8e6) then {
+		autogen_0147f779d1ce4973a3a6c698763eb8e6 = createVehicle ["sfp_zsu", [5764.7295, 2990.0996, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_0147f779d1ce4973a3a6c698763eb8e6, _group_east_3] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_0147f779d1ce4973a3a6c698763eb8e6 setDir 34.511528;
+	autogen_0147f779d1ce4973a3a6c698763eb8e6 setUnitAbility 0.60000002;
+	autogen_0147f779d1ce4973a3a6c698763eb8e6 setRank "PRIVATE";
+	if(true) then { _group_east_3 selectLeader autogen_0147f779d1ce4973a3a6c698763eb8e6; };
+	_createdUnits = _createdUnits + [autogen_0147f779d1ce4973a3a6c698763eb8e6];
+};
+// end of autogen_0147f779d1ce4973a3a6c698763eb8e6
+
+/**
+ * Waypoints for group _group_east_3
+ */
+// waypoint #1
+_wp = _group_east_3 addWaypoint[[5771.2627, 3010.9927, 0], 0, 1];
+[_group_east_3, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_3, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_3, 1] setWaypointCompletionRadius 0;
+[_group_east_3, 1] setWaypointFormation "NO CHANGE";
+[_group_east_3, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_3, 1] setWaypointStatements["true", ""];
+[_group_east_3, 1] setWaypointType "GUARD";
+// group _group_east_4
+_group_east_4 = createGroup _eastHQ;
+// begin autogen_d5b865aca91140fe94f2431a2d6611df, part of group _group_east_4
+if (true) then
+{
+	autogen_d5b865aca91140fe94f2431a2d6611df = _group_east_4 createUnit ["sfp_zsu", [5777.7939, 2980.8486, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_d5b865aca91140fe94f2431a2d6611df) then {
+		autogen_d5b865aca91140fe94f2431a2d6611df = createVehicle ["sfp_zsu", [5777.7939, 2980.8486, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_d5b865aca91140fe94f2431a2d6611df, _group_east_4] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_d5b865aca91140fe94f2431a2d6611df setDir 34.511528;
+	autogen_d5b865aca91140fe94f2431a2d6611df setUnitAbility 0.60000002;
+	autogen_d5b865aca91140fe94f2431a2d6611df setRank "PRIVATE";
+	if(true) then { _group_east_4 selectLeader autogen_d5b865aca91140fe94f2431a2d6611df; };
+	_createdUnits = _createdUnits + [autogen_d5b865aca91140fe94f2431a2d6611df];
+};
+// end of autogen_d5b865aca91140fe94f2431a2d6611df
+
+/**
+ * Waypoints for group _group_east_4
+ */
+// waypoint #1
+_wp = _group_east_4 addWaypoint[[5784.7861, 2990.6196, 0], 0, 1];
+[_group_east_4, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_4, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_4, 1] setWaypointCompletionRadius 0;
+[_group_east_4, 1] setWaypointFormation "NO CHANGE";
+[_group_east_4, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_4, 1] setWaypointStatements["true", ""];
+[_group_east_4, 1] setWaypointType "GUARD";
+// group _group_east_5
+_group_east_5 = createGroup _eastHQ;
+// begin autogen_c3aa8fe2e9584b23be5836d352d180dc, part of group _group_east_5
+if (true) then
+{
+	autogen_c3aa8fe2e9584b23be5836d352d180dc = _group_east_5 createUnit ["sfp_bmp2", [5767.1616, 2881.5847, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_c3aa8fe2e9584b23be5836d352d180dc) then {
+		autogen_c3aa8fe2e9584b23be5836d352d180dc = createVehicle ["sfp_bmp2", [5767.1616, 2881.5847, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_c3aa8fe2e9584b23be5836d352d180dc, _group_east_5] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_c3aa8fe2e9584b23be5836d352d180dc setDir -36.8605;
+	autogen_c3aa8fe2e9584b23be5836d352d180dc setUnitAbility 0.60000002;
+	autogen_c3aa8fe2e9584b23be5836d352d180dc setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_c3aa8fe2e9584b23be5836d352d180dc];
+};
+// end of autogen_c3aa8fe2e9584b23be5836d352d180dc
+// begin autogen_e57ee2dd74324135b39ec2c08f39a81a, part of group _group_east_5
+if (true) then
+{
+	autogen_e57ee2dd74324135b39ec2c08f39a81a = _group_east_5 createUnit ["sfp_rus_tl", [5773.6353, 2887.988, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_e57ee2dd74324135b39ec2c08f39a81a) then {
+		autogen_e57ee2dd74324135b39ec2c08f39a81a = createVehicle ["sfp_rus_tl", [5773.6353, 2887.988, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_e57ee2dd74324135b39ec2c08f39a81a, _group_east_5] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_e57ee2dd74324135b39ec2c08f39a81a setDir -36.860497;
+	autogen_e57ee2dd74324135b39ec2c08f39a81a setUnitAbility 0.60000002;
+	autogen_e57ee2dd74324135b39ec2c08f39a81a setRank "LIEUTENANT";
+	if(true) then { _group_east_5 selectLeader autogen_e57ee2dd74324135b39ec2c08f39a81a; };
+	_createdUnits = _createdUnits + [autogen_e57ee2dd74324135b39ec2c08f39a81a];
+};
+// end of autogen_e57ee2dd74324135b39ec2c08f39a81a
+// begin autogen_79a2e945efd7428f8877316e134efd34, part of group _group_east_5
+if (true) then
+{
+	autogen_79a2e945efd7428f8877316e134efd34 = _group_east_5 createUnit ["sfp_rus_medic", [5778.0503, 2879.8577, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_79a2e945efd7428f8877316e134efd34) then {
+		autogen_79a2e945efd7428f8877316e134efd34 = createVehicle ["sfp_rus_medic", [5778.0503, 2879.8577, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_79a2e945efd7428f8877316e134efd34, _group_east_5] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_79a2e945efd7428f8877316e134efd34 setDir -36.860497;
+	autogen_79a2e945efd7428f8877316e134efd34 setUnitAbility 0.60000002;
+	autogen_79a2e945efd7428f8877316e134efd34 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_79a2e945efd7428f8877316e134efd34];
+};
+// end of autogen_79a2e945efd7428f8877316e134efd34
+// begin autogen_f231ff646ebd4bce8cd360aaac281ad7, part of group _group_east_5
+if (true) then
+{
+	autogen_f231ff646ebd4bce8cd360aaac281ad7 = _group_east_5 createUnit ["sfp_rus_at", [5781.0005, 2882.6458, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_f231ff646ebd4bce8cd360aaac281ad7) then {
+		autogen_f231ff646ebd4bce8cd360aaac281ad7 = createVehicle ["sfp_rus_at", [5781.0005, 2882.6458, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_f231ff646ebd4bce8cd360aaac281ad7, _group_east_5] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_f231ff646ebd4bce8cd360aaac281ad7 setDir -36.860497;
+	autogen_f231ff646ebd4bce8cd360aaac281ad7 setUnitAbility 0.60000002;
+	autogen_f231ff646ebd4bce8cd360aaac281ad7 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_f231ff646ebd4bce8cd360aaac281ad7];
+};
+// end of autogen_f231ff646ebd4bce8cd360aaac281ad7
+// begin autogen_6cec65f2eceb43919c2c70e7df27a384, part of group _group_east_5
+if (true) then
+{
+	autogen_6cec65f2eceb43919c2c70e7df27a384 = _group_east_5 createUnit ["sfp_rus_machinegunner", [5780.0493, 2886.6892, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_6cec65f2eceb43919c2c70e7df27a384) then {
+		autogen_6cec65f2eceb43919c2c70e7df27a384 = createVehicle ["sfp_rus_machinegunner", [5780.0493, 2886.6892, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_6cec65f2eceb43919c2c70e7df27a384, _group_east_5] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_6cec65f2eceb43919c2c70e7df27a384 setDir -36.860497;
+	autogen_6cec65f2eceb43919c2c70e7df27a384 setUnitAbility 0.60000002;
+	autogen_6cec65f2eceb43919c2c70e7df27a384 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_6cec65f2eceb43919c2c70e7df27a384];
+};
+// end of autogen_6cec65f2eceb43919c2c70e7df27a384
+// begin autogen_23561b348e7a4dce85a2eaed0c71b1bc, part of group _group_east_5
+if (true) then
+{
+	autogen_23561b348e7a4dce85a2eaed0c71b1bc = _group_east_5 createUnit ["sfp_rus_aa", [5779.7046, 2889.9197, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_23561b348e7a4dce85a2eaed0c71b1bc) then {
+		autogen_23561b348e7a4dce85a2eaed0c71b1bc = createVehicle ["sfp_rus_aa", [5779.7046, 2889.9197, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_23561b348e7a4dce85a2eaed0c71b1bc, _group_east_5] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_23561b348e7a4dce85a2eaed0c71b1bc setDir -36.860497;
+	autogen_23561b348e7a4dce85a2eaed0c71b1bc setUnitAbility 0.60000002;
+	autogen_23561b348e7a4dce85a2eaed0c71b1bc setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_23561b348e7a4dce85a2eaed0c71b1bc];
+};
+// end of autogen_23561b348e7a4dce85a2eaed0c71b1bc
+// begin autogen_662abfc34d0d4527aee145f2f2418feb, part of group _group_east_5
+if (true) then
+{
+	autogen_662abfc34d0d4527aee145f2f2418feb = _group_east_5 createUnit ["sfp_rus_rifleman", [5774.939, 2882.7097, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_662abfc34d0d4527aee145f2f2418feb) then {
+		autogen_662abfc34d0d4527aee145f2f2418feb = createVehicle ["sfp_rus_rifleman", [5774.939, 2882.7097, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_662abfc34d0d4527aee145f2f2418feb, _group_east_5] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_662abfc34d0d4527aee145f2f2418feb setDir -36.860497;
+	autogen_662abfc34d0d4527aee145f2f2418feb setUnitAbility 0.60000002;
+	autogen_662abfc34d0d4527aee145f2f2418feb setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_662abfc34d0d4527aee145f2f2418feb];
+};
+// end of autogen_662abfc34d0d4527aee145f2f2418feb
+// group _group_east_6
+_group_east_6 = createGroup _eastHQ;
+// begin autogen_9b86e7c4e08a44199f0329d0f4c03b81, part of group _group_east_6
+if (true) then
+{
+	autogen_9b86e7c4e08a44199f0329d0f4c03b81 = _group_east_6 createUnit ["sfp_bmp1", [5789.1021, 2896.9597, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_9b86e7c4e08a44199f0329d0f4c03b81) then {
+		autogen_9b86e7c4e08a44199f0329d0f4c03b81 = createVehicle ["sfp_bmp1", [5789.1021, 2896.9597, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_9b86e7c4e08a44199f0329d0f4c03b81, _group_east_6] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_9b86e7c4e08a44199f0329d0f4c03b81 setDir -36.860497;
+	autogen_9b86e7c4e08a44199f0329d0f4c03b81 setUnitAbility 0.60000002;
+	autogen_9b86e7c4e08a44199f0329d0f4c03b81 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_9b86e7c4e08a44199f0329d0f4c03b81];
+};
+// end of autogen_9b86e7c4e08a44199f0329d0f4c03b81
+// begin autogen_672a7dc0d26040ada3e5acaeb2db9a3d, part of group _group_east_6
+if (true) then
+{
+	autogen_672a7dc0d26040ada3e5acaeb2db9a3d = _group_east_6 createUnit ["sfp_rus_tl", [5795.5737, 2903.364, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_672a7dc0d26040ada3e5acaeb2db9a3d) then {
+		autogen_672a7dc0d26040ada3e5acaeb2db9a3d = createVehicle ["sfp_rus_tl", [5795.5737, 2903.364, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_672a7dc0d26040ada3e5acaeb2db9a3d, _group_east_6] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_672a7dc0d26040ada3e5acaeb2db9a3d setDir -36.860497;
+	autogen_672a7dc0d26040ada3e5acaeb2db9a3d setUnitAbility 0.60000002;
+	autogen_672a7dc0d26040ada3e5acaeb2db9a3d setRank "LIEUTENANT";
+	if(true) then { _group_east_6 selectLeader autogen_672a7dc0d26040ada3e5acaeb2db9a3d; };
+	_createdUnits = _createdUnits + [autogen_672a7dc0d26040ada3e5acaeb2db9a3d];
+};
+// end of autogen_672a7dc0d26040ada3e5acaeb2db9a3d
+// begin autogen_0b4b43dbdb604efc8163d64b34747d10, part of group _group_east_6
+if (true) then
+{
+	autogen_0b4b43dbdb604efc8163d64b34747d10 = _group_east_6 createUnit ["sfp_rus_medic", [5799.9937, 2895.2317, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_0b4b43dbdb604efc8163d64b34747d10) then {
+		autogen_0b4b43dbdb604efc8163d64b34747d10 = createVehicle ["sfp_rus_medic", [5799.9937, 2895.2317, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_0b4b43dbdb604efc8163d64b34747d10, _group_east_6] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_0b4b43dbdb604efc8163d64b34747d10 setDir -36.860497;
+	autogen_0b4b43dbdb604efc8163d64b34747d10 setUnitAbility 0.60000002;
+	autogen_0b4b43dbdb604efc8163d64b34747d10 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_0b4b43dbdb604efc8163d64b34747d10];
+};
+// end of autogen_0b4b43dbdb604efc8163d64b34747d10
+// begin autogen_195721cf6e6b47a6900799ba058cd787, part of group _group_east_6
+if (true) then
+{
+	autogen_195721cf6e6b47a6900799ba058cd787 = _group_east_6 createUnit ["sfp_rus_at", [5802.9409, 2898.0222, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_195721cf6e6b47a6900799ba058cd787) then {
+		autogen_195721cf6e6b47a6900799ba058cd787 = createVehicle ["sfp_rus_at", [5802.9409, 2898.0222, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_195721cf6e6b47a6900799ba058cd787, _group_east_6] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_195721cf6e6b47a6900799ba058cd787 setDir -36.860497;
+	autogen_195721cf6e6b47a6900799ba058cd787 setUnitAbility 0.60000002;
+	autogen_195721cf6e6b47a6900799ba058cd787 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_195721cf6e6b47a6900799ba058cd787];
+};
+// end of autogen_195721cf6e6b47a6900799ba058cd787
+// begin autogen_950dfe9040334d23888087731bd85723, part of group _group_east_6
+if (true) then
+{
+	autogen_950dfe9040334d23888087731bd85723 = _group_east_6 createUnit ["sfp_rus_machinegunner", [5801.9937, 2902.0618, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_950dfe9040334d23888087731bd85723) then {
+		autogen_950dfe9040334d23888087731bd85723 = createVehicle ["sfp_rus_machinegunner", [5801.9937, 2902.0618, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_950dfe9040334d23888087731bd85723, _group_east_6] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_950dfe9040334d23888087731bd85723 setDir -36.860497;
+	autogen_950dfe9040334d23888087731bd85723 setUnitAbility 0.60000002;
+	autogen_950dfe9040334d23888087731bd85723 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_950dfe9040334d23888087731bd85723];
+};
+// end of autogen_950dfe9040334d23888087731bd85723
+// begin autogen_61cad578dece4cc58e14bf5581380a76, part of group _group_east_6
+if (true) then
+{
+	autogen_61cad578dece4cc58e14bf5581380a76 = _group_east_6 createUnit ["sfp_rus_rifleman", [5796.8813, 2898.0813, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_61cad578dece4cc58e14bf5581380a76) then {
+		autogen_61cad578dece4cc58e14bf5581380a76 = createVehicle ["sfp_rus_rifleman", [5796.8813, 2898.0813, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_61cad578dece4cc58e14bf5581380a76, _group_east_6] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_61cad578dece4cc58e14bf5581380a76 setDir -36.860497;
+	autogen_61cad578dece4cc58e14bf5581380a76 setUnitAbility 0.60000002;
+	autogen_61cad578dece4cc58e14bf5581380a76 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_61cad578dece4cc58e14bf5581380a76];
+};
+// end of autogen_61cad578dece4cc58e14bf5581380a76
+// group _group_east_7
+_group_east_7 = createGroup _eastHQ;
+// begin autogen_b8aac5e27a104c7ba3c29d6148fd43ae, part of group _group_east_7
+if (true) then
+{
+	autogen_b8aac5e27a104c7ba3c29d6148fd43ae = _group_east_7 createUnit ["sfp_bmp2", [5799.6626, 2879.7483, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_b8aac5e27a104c7ba3c29d6148fd43ae) then {
+		autogen_b8aac5e27a104c7ba3c29d6148fd43ae = createVehicle ["sfp_bmp2", [5799.6626, 2879.7483, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_b8aac5e27a104c7ba3c29d6148fd43ae, _group_east_7] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_b8aac5e27a104c7ba3c29d6148fd43ae setDir -36.8605;
+	autogen_b8aac5e27a104c7ba3c29d6148fd43ae setUnitAbility 0.60000002;
+	autogen_b8aac5e27a104c7ba3c29d6148fd43ae setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_b8aac5e27a104c7ba3c29d6148fd43ae];
+};
+// end of autogen_b8aac5e27a104c7ba3c29d6148fd43ae
+// begin autogen_e43a04b22b8e4ab99386f9d3ef4eee17, part of group _group_east_7
+if (true) then
+{
+	autogen_e43a04b22b8e4ab99386f9d3ef4eee17 = _group_east_7 createUnit ["sfp_rus_tl", [5806.1382, 2886.1506, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_e43a04b22b8e4ab99386f9d3ef4eee17) then {
+		autogen_e43a04b22b8e4ab99386f9d3ef4eee17 = createVehicle ["sfp_rus_tl", [5806.1382, 2886.1506, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_e43a04b22b8e4ab99386f9d3ef4eee17, _group_east_7] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_e43a04b22b8e4ab99386f9d3ef4eee17 setDir -36.860497;
+	autogen_e43a04b22b8e4ab99386f9d3ef4eee17 setUnitAbility 0.60000002;
+	autogen_e43a04b22b8e4ab99386f9d3ef4eee17 setRank "LIEUTENANT";
+	if(true) then { _group_east_7 selectLeader autogen_e43a04b22b8e4ab99386f9d3ef4eee17; };
+	_createdUnits = _createdUnits + [autogen_e43a04b22b8e4ab99386f9d3ef4eee17];
+};
+// end of autogen_e43a04b22b8e4ab99386f9d3ef4eee17
+// begin autogen_dd51122e496b43c99f88fc46acf26d89, part of group _group_east_7
+if (true) then
+{
+	autogen_dd51122e496b43c99f88fc46acf26d89 = _group_east_7 createUnit ["sfp_rus_at", [5800.7251, 2872.5388, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_dd51122e496b43c99f88fc46acf26d89) then {
+		autogen_dd51122e496b43c99f88fc46acf26d89 = createVehicle ["sfp_rus_at", [5800.7251, 2872.5388, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_dd51122e496b43c99f88fc46acf26d89, _group_east_7] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_dd51122e496b43c99f88fc46acf26d89 setDir -36.860497;
+	autogen_dd51122e496b43c99f88fc46acf26d89 setUnitAbility 0.60000002;
+	autogen_dd51122e496b43c99f88fc46acf26d89 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_dd51122e496b43c99f88fc46acf26d89];
+};
+// end of autogen_dd51122e496b43c99f88fc46acf26d89
+// begin autogen_2af4811f2f374cb8883d88c7cbfb2620, part of group _group_east_7
+if (true) then
+{
+	autogen_2af4811f2f374cb8883d88c7cbfb2620 = _group_east_7 createUnit ["sfp_rus_machinegunner", [5812.5542, 2884.8518, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_2af4811f2f374cb8883d88c7cbfb2620) then {
+		autogen_2af4811f2f374cb8883d88c7cbfb2620 = createVehicle ["sfp_rus_machinegunner", [5812.5542, 2884.8518, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_2af4811f2f374cb8883d88c7cbfb2620, _group_east_7] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_2af4811f2f374cb8883d88c7cbfb2620 setDir -36.860497;
+	autogen_2af4811f2f374cb8883d88c7cbfb2620 setUnitAbility 0.60000002;
+	autogen_2af4811f2f374cb8883d88c7cbfb2620 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_2af4811f2f374cb8883d88c7cbfb2620];
+};
+// end of autogen_2af4811f2f374cb8883d88c7cbfb2620
+// begin autogen_57b7f035852044e489b7d27dee5af331, part of group _group_east_7
+if (true) then
+{
+	autogen_57b7f035852044e489b7d27dee5af331 = _group_east_7 createUnit ["sfp_rus_rifleman", [5812.2075, 2888.0842, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_57b7f035852044e489b7d27dee5af331) then {
+		autogen_57b7f035852044e489b7d27dee5af331 = createVehicle ["sfp_rus_rifleman", [5812.2075, 2888.0842, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_57b7f035852044e489b7d27dee5af331, _group_east_7] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_57b7f035852044e489b7d27dee5af331 setDir -36.860497;
+	autogen_57b7f035852044e489b7d27dee5af331 setUnitAbility 0.60000002;
+	autogen_57b7f035852044e489b7d27dee5af331 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_57b7f035852044e489b7d27dee5af331];
+};
+// end of autogen_57b7f035852044e489b7d27dee5af331
+// begin autogen_09aa94d7413c4d1f820d453dad4c913f, part of group _group_east_7
+if (true) then
+{
+	autogen_09aa94d7413c4d1f820d453dad4c913f = _group_east_7 createUnit ["sfp_rus_rifleman", [5807.4429, 2880.8723, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_09aa94d7413c4d1f820d453dad4c913f) then {
+		autogen_09aa94d7413c4d1f820d453dad4c913f = createVehicle ["sfp_rus_rifleman", [5807.4429, 2880.8723, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_09aa94d7413c4d1f820d453dad4c913f, _group_east_7] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_09aa94d7413c4d1f820d453dad4c913f setDir -36.860497;
+	autogen_09aa94d7413c4d1f820d453dad4c913f setUnitAbility 0.60000002;
+	autogen_09aa94d7413c4d1f820d453dad4c913f setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_09aa94d7413c4d1f820d453dad4c913f];
+};
+// end of autogen_09aa94d7413c4d1f820d453dad4c913f
+
+/**
+ * Waypoints for group _group_east_7
+ */
+// waypoint #1
+_wp = _group_east_7 addWaypoint[[5802.772, 2889.9314, 0], 0, 1];
+[_group_east_7, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_7, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_7, 1] setWaypointCompletionRadius 0;
+[_group_east_7, 1] setWaypointFormation "NO CHANGE";
+[_group_east_7, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_7, 1] setWaypointStatements["true", ""];
+[_group_east_7, 1] setWaypointType "GUARD";
+// group _group_east_8
+_group_east_8 = createGroup _eastHQ;
+// begin autogen_2116d81258d447c59a086dd9a81b2fdc, part of group _group_east_8
+if (true) then
+{
+	autogen_2116d81258d447c59a086dd9a81b2fdc = _group_east_8 createUnit ["sfp_rus_tl", [5822.1987, 2935.4866, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_2116d81258d447c59a086dd9a81b2fdc) then {
+		autogen_2116d81258d447c59a086dd9a81b2fdc = createVehicle ["sfp_rus_tl", [5822.1987, 2935.4866, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_2116d81258d447c59a086dd9a81b2fdc, _group_east_8] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_2116d81258d447c59a086dd9a81b2fdc setDir -36.860497;
+	autogen_2116d81258d447c59a086dd9a81b2fdc setUnitAbility 0.60000002;
+	autogen_2116d81258d447c59a086dd9a81b2fdc setRank "LIEUTENANT";
+	if(true) then { _group_east_8 selectLeader autogen_2116d81258d447c59a086dd9a81b2fdc; };
+	_createdUnits = _createdUnits + [autogen_2116d81258d447c59a086dd9a81b2fdc];
+};
+// end of autogen_2116d81258d447c59a086dd9a81b2fdc
+// begin autogen_e7734939492349a1bfbcd3c2b3e29a1d, part of group _group_east_8
+if (true) then
+{
+	autogen_e7734939492349a1bfbcd3c2b3e29a1d = _group_east_8 createUnit ["sfp_rus_machinegunner", [5828.6147, 2934.1858, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_e7734939492349a1bfbcd3c2b3e29a1d) then {
+		autogen_e7734939492349a1bfbcd3c2b3e29a1d = createVehicle ["sfp_rus_machinegunner", [5828.6147, 2934.1858, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_e7734939492349a1bfbcd3c2b3e29a1d, _group_east_8] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_e7734939492349a1bfbcd3c2b3e29a1d setDir -36.860497;
+	autogen_e7734939492349a1bfbcd3c2b3e29a1d setUnitAbility 0.60000002;
+	autogen_e7734939492349a1bfbcd3c2b3e29a1d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_e7734939492349a1bfbcd3c2b3e29a1d];
+};
+// end of autogen_e7734939492349a1bfbcd3c2b3e29a1d
+// begin autogen_1fad6f81270842eb82b91d043721a927, part of group _group_east_8
+if (true) then
+{
+	autogen_1fad6f81270842eb82b91d043721a927 = _group_east_8 createUnit ["sfp_rus_aa", [5828.271, 2937.4182, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_1fad6f81270842eb82b91d043721a927) then {
+		autogen_1fad6f81270842eb82b91d043721a927 = createVehicle ["sfp_rus_aa", [5828.271, 2937.4182, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_1fad6f81270842eb82b91d043721a927, _group_east_8] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_1fad6f81270842eb82b91d043721a927 setDir -36.860497;
+	autogen_1fad6f81270842eb82b91d043721a927 setUnitAbility 0.60000002;
+	autogen_1fad6f81270842eb82b91d043721a927 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_1fad6f81270842eb82b91d043721a927];
+};
+// end of autogen_1fad6f81270842eb82b91d043721a927
+
+/**
+ * Waypoints for group _group_east_8
+ */
+// waypoint #1
+_wp = _group_east_8 addWaypoint[[5816.5854, 2943.0212, 0], 0, 1];
+[_group_east_8, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_8, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_8, 1] setWaypointCompletionRadius 0;
+[_group_east_8, 1] setWaypointFormation "NO CHANGE";
+[_group_east_8, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_8, 1] setWaypointStatements["true", ""];
+[_group_east_8, 1] setWaypointType "GUARD";
+// group _group_east_9
+_group_east_9 = createGroup _eastHQ;
+// begin autogen_5399cf281beb41389d28d5c01e9e2e95, part of group _group_east_9
+if (true) then
+{
+	autogen_5399cf281beb41389d28d5c01e9e2e95 = _group_east_9 createUnit ["sfp_bmp2", [5837.6714, 2944.4553, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_5399cf281beb41389d28d5c01e9e2e95) then {
+		autogen_5399cf281beb41389d28d5c01e9e2e95 = createVehicle ["sfp_bmp2", [5837.6714, 2944.4553, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_5399cf281beb41389d28d5c01e9e2e95, _group_east_9] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_5399cf281beb41389d28d5c01e9e2e95 setDir -36.8605;
+	autogen_5399cf281beb41389d28d5c01e9e2e95 setUnitAbility 0.60000002;
+	autogen_5399cf281beb41389d28d5c01e9e2e95 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_5399cf281beb41389d28d5c01e9e2e95];
+};
+// end of autogen_5399cf281beb41389d28d5c01e9e2e95
+// begin autogen_8af8eb013061416b8ccf2ef437dcef18, part of group _group_east_9
+if (true) then
+{
+	autogen_8af8eb013061416b8ccf2ef437dcef18 = _group_east_9 createUnit ["sfp_rus_tl", [5844.1421, 2950.8606, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_8af8eb013061416b8ccf2ef437dcef18) then {
+		autogen_8af8eb013061416b8ccf2ef437dcef18 = createVehicle ["sfp_rus_tl", [5844.1421, 2950.8606, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_8af8eb013061416b8ccf2ef437dcef18, _group_east_9] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_8af8eb013061416b8ccf2ef437dcef18 setDir -36.860497;
+	autogen_8af8eb013061416b8ccf2ef437dcef18 setUnitAbility 0.60000002;
+	autogen_8af8eb013061416b8ccf2ef437dcef18 setRank "LIEUTENANT";
+	if(true) then { _group_east_9 selectLeader autogen_8af8eb013061416b8ccf2ef437dcef18; };
+	_createdUnits = _createdUnits + [autogen_8af8eb013061416b8ccf2ef437dcef18];
+};
+// end of autogen_8af8eb013061416b8ccf2ef437dcef18
+// begin autogen_8c4e9bb2ddef424f84fedcdc06947811, part of group _group_east_9
+if (true) then
+{
+	autogen_8c4e9bb2ddef424f84fedcdc06947811 = _group_east_9 createUnit ["sfp_rus_medic", [5848.561, 2942.7283, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_8c4e9bb2ddef424f84fedcdc06947811) then {
+		autogen_8c4e9bb2ddef424f84fedcdc06947811 = createVehicle ["sfp_rus_medic", [5848.561, 2942.7283, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_8c4e9bb2ddef424f84fedcdc06947811, _group_east_9] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_8c4e9bb2ddef424f84fedcdc06947811 setDir -36.860497;
+	autogen_8c4e9bb2ddef424f84fedcdc06947811 setUnitAbility 0.60000002;
+	autogen_8c4e9bb2ddef424f84fedcdc06947811 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_8c4e9bb2ddef424f84fedcdc06947811];
+};
+// end of autogen_8c4e9bb2ddef424f84fedcdc06947811
+// begin autogen_dde72620376a40c7a92cc8fc05031ebb, part of group _group_east_9
+if (true) then
+{
+	autogen_dde72620376a40c7a92cc8fc05031ebb = _group_east_9 createUnit ["sfp_rus_at", [5851.5083, 2945.5193, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_dde72620376a40c7a92cc8fc05031ebb) then {
+		autogen_dde72620376a40c7a92cc8fc05031ebb = createVehicle ["sfp_rus_at", [5851.5083, 2945.5193, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_dde72620376a40c7a92cc8fc05031ebb, _group_east_9] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_dde72620376a40c7a92cc8fc05031ebb setDir -36.860497;
+	autogen_dde72620376a40c7a92cc8fc05031ebb setUnitAbility 0.60000002;
+	autogen_dde72620376a40c7a92cc8fc05031ebb setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_dde72620376a40c7a92cc8fc05031ebb];
+};
+// end of autogen_dde72620376a40c7a92cc8fc05031ebb
+// begin autogen_f4f7d43fce884857b9af46e7cd8f8856, part of group _group_east_9
+if (true) then
+{
+	autogen_f4f7d43fce884857b9af46e7cd8f8856 = _group_east_9 createUnit ["sfp_rus_machinegunner", [5850.5562, 2949.5603, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_f4f7d43fce884857b9af46e7cd8f8856) then {
+		autogen_f4f7d43fce884857b9af46e7cd8f8856 = createVehicle ["sfp_rus_machinegunner", [5850.5562, 2949.5603, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_f4f7d43fce884857b9af46e7cd8f8856, _group_east_9] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_f4f7d43fce884857b9af46e7cd8f8856 setDir -36.860497;
+	autogen_f4f7d43fce884857b9af46e7cd8f8856 setUnitAbility 0.60000002;
+	autogen_f4f7d43fce884857b9af46e7cd8f8856 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_f4f7d43fce884857b9af46e7cd8f8856];
+};
+// end of autogen_f4f7d43fce884857b9af46e7cd8f8856
+// begin autogen_386022c783594ede9213dc46e15d8a0d, part of group _group_east_9
+if (true) then
+{
+	autogen_386022c783594ede9213dc46e15d8a0d = _group_east_9 createUnit ["sfp_rus_aa", [5850.2114, 2952.7942, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_386022c783594ede9213dc46e15d8a0d) then {
+		autogen_386022c783594ede9213dc46e15d8a0d = createVehicle ["sfp_rus_aa", [5850.2114, 2952.7942, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_386022c783594ede9213dc46e15d8a0d, _group_east_9] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_386022c783594ede9213dc46e15d8a0d setDir -36.860497;
+	autogen_386022c783594ede9213dc46e15d8a0d setUnitAbility 0.60000002;
+	autogen_386022c783594ede9213dc46e15d8a0d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_386022c783594ede9213dc46e15d8a0d];
+};
+// end of autogen_386022c783594ede9213dc46e15d8a0d
+// begin autogen_8f783fea9d11401c94ad30eefd7cbe06, part of group _group_east_9
+if (true) then
+{
+	autogen_8f783fea9d11401c94ad30eefd7cbe06 = _group_east_9 createUnit ["sfp_rus_rifleman", [5845.4507, 2945.5818, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_8f783fea9d11401c94ad30eefd7cbe06) then {
+		autogen_8f783fea9d11401c94ad30eefd7cbe06 = createVehicle ["sfp_rus_rifleman", [5845.4507, 2945.5818, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_8f783fea9d11401c94ad30eefd7cbe06, _group_east_9] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_8f783fea9d11401c94ad30eefd7cbe06 setDir -36.860497;
+	autogen_8f783fea9d11401c94ad30eefd7cbe06 setUnitAbility 0.60000002;
+	autogen_8f783fea9d11401c94ad30eefd7cbe06 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_8f783fea9d11401c94ad30eefd7cbe06];
+};
+// end of autogen_8f783fea9d11401c94ad30eefd7cbe06
+
+/**
+ * Waypoints for group _group_east_9
+ */
+// waypoint #1
+_wp = _group_east_9 addWaypoint[[5838.7993, 2956.7488, 0], 0, 1];
+[_group_east_9, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_9, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_9, 1] setWaypointCompletionRadius 0;
+[_group_east_9, 1] setWaypointFormation "NO CHANGE";
+[_group_east_9, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_9, 1] setWaypointStatements["true", ""];
+[_group_east_9, 1] setWaypointType "GUARD";
+// group _group_east_10
+_group_east_10 = createGroup _eastHQ;
+// begin autogen_9eeafa849fe94ce8a044c6420a10ba79, part of group _group_east_10
+if (true) then
+{
+	autogen_9eeafa849fe94ce8a044c6420a10ba79 = _group_east_10 createUnit ["sfp_bmp2", [5848.2319, 2927.2449, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_9eeafa849fe94ce8a044c6420a10ba79) then {
+		autogen_9eeafa849fe94ce8a044c6420a10ba79 = createVehicle ["sfp_bmp2", [5848.2319, 2927.2449, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_9eeafa849fe94ce8a044c6420a10ba79, _group_east_10] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_9eeafa849fe94ce8a044c6420a10ba79 setDir -36.8605;
+	autogen_9eeafa849fe94ce8a044c6420a10ba79 setUnitAbility 0.60000002;
+	autogen_9eeafa849fe94ce8a044c6420a10ba79 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_9eeafa849fe94ce8a044c6420a10ba79];
+};
+// end of autogen_9eeafa849fe94ce8a044c6420a10ba79
+// begin autogen_f6322eb34c7940ccad57fa83e1b0ec3c, part of group _group_east_10
+if (true) then
+{
+	autogen_f6322eb34c7940ccad57fa83e1b0ec3c = _group_east_10 createUnit ["sfp_rus_tl", [5854.7046, 2933.6482, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_f6322eb34c7940ccad57fa83e1b0ec3c) then {
+		autogen_f6322eb34c7940ccad57fa83e1b0ec3c = createVehicle ["sfp_rus_tl", [5854.7046, 2933.6482, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_f6322eb34c7940ccad57fa83e1b0ec3c, _group_east_10] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_f6322eb34c7940ccad57fa83e1b0ec3c setDir -36.860497;
+	autogen_f6322eb34c7940ccad57fa83e1b0ec3c setUnitAbility 0.60000002;
+	autogen_f6322eb34c7940ccad57fa83e1b0ec3c setRank "LIEUTENANT";
+	if(true) then { _group_east_10 selectLeader autogen_f6322eb34c7940ccad57fa83e1b0ec3c; };
+	_createdUnits = _createdUnits + [autogen_f6322eb34c7940ccad57fa83e1b0ec3c];
+};
+// end of autogen_f6322eb34c7940ccad57fa83e1b0ec3c
+// begin autogen_cffba56054ab447b9127bf48fc64d117, part of group _group_east_10
+if (true) then
+{
+	autogen_cffba56054ab447b9127bf48fc64d117 = _group_east_10 createUnit ["sfp_rus_medic", [5859.1226, 2925.5183, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_cffba56054ab447b9127bf48fc64d117) then {
+		autogen_cffba56054ab447b9127bf48fc64d117 = createVehicle ["sfp_rus_medic", [5859.1226, 2925.5183, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_cffba56054ab447b9127bf48fc64d117, _group_east_10] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_cffba56054ab447b9127bf48fc64d117 setDir -36.860497;
+	autogen_cffba56054ab447b9127bf48fc64d117 setUnitAbility 0.60000002;
+	autogen_cffba56054ab447b9127bf48fc64d117 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_cffba56054ab447b9127bf48fc64d117];
+};
+// end of autogen_cffba56054ab447b9127bf48fc64d117
+// begin autogen_94b96e6a64974519857465b5afd6b68d, part of group _group_east_10
+if (true) then
+{
+	autogen_94b96e6a64974519857465b5afd6b68d = _group_east_10 createUnit ["sfp_rus_at", [5862.0698, 2928.3083, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_94b96e6a64974519857465b5afd6b68d) then {
+		autogen_94b96e6a64974519857465b5afd6b68d = createVehicle ["sfp_rus_at", [5862.0698, 2928.3083, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_94b96e6a64974519857465b5afd6b68d, _group_east_10] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_94b96e6a64974519857465b5afd6b68d setDir -36.860497;
+	autogen_94b96e6a64974519857465b5afd6b68d setUnitAbility 0.60000002;
+	autogen_94b96e6a64974519857465b5afd6b68d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_94b96e6a64974519857465b5afd6b68d];
+};
+// end of autogen_94b96e6a64974519857465b5afd6b68d
+// begin autogen_dddf66be529f410090abab1bb8d537b2, part of group _group_east_10
+if (true) then
+{
+	autogen_dddf66be529f410090abab1bb8d537b2 = _group_east_10 createUnit ["sfp_rus_machinegunner", [5861.1206, 2932.3494, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_dddf66be529f410090abab1bb8d537b2) then {
+		autogen_dddf66be529f410090abab1bb8d537b2 = createVehicle ["sfp_rus_machinegunner", [5861.1206, 2932.3494, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_dddf66be529f410090abab1bb8d537b2, _group_east_10] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_dddf66be529f410090abab1bb8d537b2 setDir -36.860497;
+	autogen_dddf66be529f410090abab1bb8d537b2 setUnitAbility 0.60000002;
+	autogen_dddf66be529f410090abab1bb8d537b2 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_dddf66be529f410090abab1bb8d537b2];
+};
+// end of autogen_dddf66be529f410090abab1bb8d537b2
+// begin autogen_b3a10322a9a44f079b8aa3eacf0535e2, part of group _group_east_10
+if (true) then
+{
+	autogen_b3a10322a9a44f079b8aa3eacf0535e2 = _group_east_10 createUnit ["sfp_rus_rifleman", [5860.7759, 2935.5803, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_b3a10322a9a44f079b8aa3eacf0535e2) then {
+		autogen_b3a10322a9a44f079b8aa3eacf0535e2 = createVehicle ["sfp_rus_rifleman", [5860.7759, 2935.5803, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_b3a10322a9a44f079b8aa3eacf0535e2, _group_east_10] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_b3a10322a9a44f079b8aa3eacf0535e2 setDir -36.860497;
+	autogen_b3a10322a9a44f079b8aa3eacf0535e2 setUnitAbility 0.60000002;
+	autogen_b3a10322a9a44f079b8aa3eacf0535e2 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_b3a10322a9a44f079b8aa3eacf0535e2];
+};
+// end of autogen_b3a10322a9a44f079b8aa3eacf0535e2
+// begin autogen_ed5fa90fbe1f499a862501ca7ab491e5, part of group _group_east_10
+if (true) then
+{
+	autogen_ed5fa90fbe1f499a862501ca7ab491e5 = _group_east_10 createUnit ["sfp_rus_rifleman", [5856.0093, 2928.3694, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_ed5fa90fbe1f499a862501ca7ab491e5) then {
+		autogen_ed5fa90fbe1f499a862501ca7ab491e5 = createVehicle ["sfp_rus_rifleman", [5856.0093, 2928.3694, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_ed5fa90fbe1f499a862501ca7ab491e5, _group_east_10] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_ed5fa90fbe1f499a862501ca7ab491e5 setDir -36.860497;
+	autogen_ed5fa90fbe1f499a862501ca7ab491e5 setUnitAbility 0.60000002;
+	autogen_ed5fa90fbe1f499a862501ca7ab491e5 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_ed5fa90fbe1f499a862501ca7ab491e5];
+};
+// end of autogen_ed5fa90fbe1f499a862501ca7ab491e5
+
+/**
+ * Waypoints for group _group_east_10
+ */
+// waypoint #1
+_wp = _group_east_10 addWaypoint[[5850.6636, 2937.9426, 0], 0, 1];
+[_group_east_10, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_10, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_10, 1] setWaypointCompletionRadius 0;
+[_group_east_10, 1] setWaypointFormation "NO CHANGE";
+[_group_east_10, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_10, 1] setWaypointStatements["true", ""];
+[_group_east_10, 1] setWaypointType "GUARD";
+// group _group_east_11
+_group_east_11 = createGroup _eastHQ;
+// begin autogen_29a1261ee3a546d3b741dc2cf0218d9f, part of group _group_east_11
+if (true) then
+{
+	autogen_29a1261ee3a546d3b741dc2cf0218d9f = _group_east_11 createUnit ["sfp_bmp1", [5911.4546, 3039.4807, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_29a1261ee3a546d3b741dc2cf0218d9f) then {
+		autogen_29a1261ee3a546d3b741dc2cf0218d9f = createVehicle ["sfp_bmp1", [5911.4546, 3039.4807, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_29a1261ee3a546d3b741dc2cf0218d9f, _group_east_11] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_29a1261ee3a546d3b741dc2cf0218d9f setDir -36.860497;
+	autogen_29a1261ee3a546d3b741dc2cf0218d9f setUnitAbility 0.60000002;
+	autogen_29a1261ee3a546d3b741dc2cf0218d9f setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_29a1261ee3a546d3b741dc2cf0218d9f];
+};
+// end of autogen_29a1261ee3a546d3b741dc2cf0218d9f
+// begin autogen_77ccdd2f97d2480faad3a56c94cc6e6a, part of group _group_east_11
+if (true) then
+{
+	autogen_77ccdd2f97d2480faad3a56c94cc6e6a = _group_east_11 createUnit ["sfp_rus_tl", [5917.9233, 3045.8879, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_77ccdd2f97d2480faad3a56c94cc6e6a) then {
+		autogen_77ccdd2f97d2480faad3a56c94cc6e6a = createVehicle ["sfp_rus_tl", [5917.9233, 3045.8879, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_77ccdd2f97d2480faad3a56c94cc6e6a, _group_east_11] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_77ccdd2f97d2480faad3a56c94cc6e6a setDir -36.860497;
+	autogen_77ccdd2f97d2480faad3a56c94cc6e6a setUnitAbility 0.60000002;
+	autogen_77ccdd2f97d2480faad3a56c94cc6e6a setRank "LIEUTENANT";
+	if(true) then { _group_east_11 selectLeader autogen_77ccdd2f97d2480faad3a56c94cc6e6a; };
+	_createdUnits = _createdUnits + [autogen_77ccdd2f97d2480faad3a56c94cc6e6a];
+};
+// end of autogen_77ccdd2f97d2480faad3a56c94cc6e6a
+// begin autogen_003aea68824e49e085c5af8c25f94f6b, part of group _group_east_11
+if (true) then
+{
+	autogen_003aea68824e49e085c5af8c25f94f6b = _group_east_11 createUnit ["sfp_rus_medic", [5922.3452, 3037.7537, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_003aea68824e49e085c5af8c25f94f6b) then {
+		autogen_003aea68824e49e085c5af8c25f94f6b = createVehicle ["sfp_rus_medic", [5922.3452, 3037.7537, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_003aea68824e49e085c5af8c25f94f6b, _group_east_11] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_003aea68824e49e085c5af8c25f94f6b setDir -36.860497;
+	autogen_003aea68824e49e085c5af8c25f94f6b setUnitAbility 0.60000002;
+	autogen_003aea68824e49e085c5af8c25f94f6b setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_003aea68824e49e085c5af8c25f94f6b];
+};
+// end of autogen_003aea68824e49e085c5af8c25f94f6b
+// begin autogen_030773c1f38544f7b4f6457659c68a96, part of group _group_east_11
+if (true) then
+{
+	autogen_030773c1f38544f7b4f6457659c68a96 = _group_east_11 createUnit ["sfp_rus_at", [5925.2896, 3040.5437, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_030773c1f38544f7b4f6457659c68a96) then {
+		autogen_030773c1f38544f7b4f6457659c68a96 = createVehicle ["sfp_rus_at", [5925.2896, 3040.5437, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_030773c1f38544f7b4f6457659c68a96, _group_east_11] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_030773c1f38544f7b4f6457659c68a96 setDir -36.860497;
+	autogen_030773c1f38544f7b4f6457659c68a96 setUnitAbility 0.60000002;
+	autogen_030773c1f38544f7b4f6457659c68a96 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_030773c1f38544f7b4f6457659c68a96];
+};
+// end of autogen_030773c1f38544f7b4f6457659c68a96
+// begin autogen_9757676462864bf9a4625561efa01a66, part of group _group_east_11
+if (true) then
+{
+	autogen_9757676462864bf9a4625561efa01a66 = _group_east_11 createUnit ["sfp_rus_machinegunner", [5924.3403, 3044.5862, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_9757676462864bf9a4625561efa01a66) then {
+		autogen_9757676462864bf9a4625561efa01a66 = createVehicle ["sfp_rus_machinegunner", [5924.3403, 3044.5862, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_9757676462864bf9a4625561efa01a66, _group_east_11] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_9757676462864bf9a4625561efa01a66 setDir -36.860497;
+	autogen_9757676462864bf9a4625561efa01a66 setUnitAbility 0.60000002;
+	autogen_9757676462864bf9a4625561efa01a66 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_9757676462864bf9a4625561efa01a66];
+};
+// end of autogen_9757676462864bf9a4625561efa01a66
+// begin autogen_77d13153ab07436cb2efc6c2670ce1a2, part of group _group_east_11
+if (true) then
+{
+	autogen_77d13153ab07436cb2efc6c2670ce1a2 = _group_east_11 createUnit ["sfp_rus_aa", [5923.9946, 3047.8157, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_77d13153ab07436cb2efc6c2670ce1a2) then {
+		autogen_77d13153ab07436cb2efc6c2670ce1a2 = createVehicle ["sfp_rus_aa", [5923.9946, 3047.8157, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_77d13153ab07436cb2efc6c2670ce1a2, _group_east_11] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_77d13153ab07436cb2efc6c2670ce1a2 setDir -36.860497;
+	autogen_77d13153ab07436cb2efc6c2670ce1a2 setUnitAbility 0.60000002;
+	autogen_77d13153ab07436cb2efc6c2670ce1a2 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_77d13153ab07436cb2efc6c2670ce1a2];
+};
+// end of autogen_77d13153ab07436cb2efc6c2670ce1a2
+// begin autogen_44c181f0a165466483b47a680c66019f, part of group _group_east_11
+if (true) then
+{
+	autogen_44c181f0a165466483b47a680c66019f = _group_east_11 createUnit ["sfp_rus_rifleman", [5919.231, 3040.6072, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_44c181f0a165466483b47a680c66019f) then {
+		autogen_44c181f0a165466483b47a680c66019f = createVehicle ["sfp_rus_rifleman", [5919.231, 3040.6072, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_44c181f0a165466483b47a680c66019f, _group_east_11] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_44c181f0a165466483b47a680c66019f setDir -36.860497;
+	autogen_44c181f0a165466483b47a680c66019f setUnitAbility 0.60000002;
+	autogen_44c181f0a165466483b47a680c66019f setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_44c181f0a165466483b47a680c66019f];
+};
+// end of autogen_44c181f0a165466483b47a680c66019f
+
+/**
+ * Waypoints for group _group_east_11
+ */
+// waypoint #1
+_wp = _group_east_11 addWaypoint[[5911.7017, 3054.1702, 0], 0, 1];
+[_group_east_11, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_11, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_11, 1] setWaypointCompletionRadius 0;
+[_group_east_11, 1] setWaypointFormation "NO CHANGE";
+[_group_east_11, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_11, 1] setWaypointStatements["true", ""];
+[_group_east_11, 1] setWaypointType "GUARD";
+// group _group_east_12
+_group_east_12 = createGroup _eastHQ;
+// begin autogen_d616fcb2e1334b709ca51dcfb237fb6e, part of group _group_east_12
+if (true) then
+{
+	autogen_d616fcb2e1334b709ca51dcfb237fb6e = _group_east_12 createUnit ["sfp_bmp1", [5933.3921, 3054.8562, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_d616fcb2e1334b709ca51dcfb237fb6e) then {
+		autogen_d616fcb2e1334b709ca51dcfb237fb6e = createVehicle ["sfp_bmp1", [5933.3921, 3054.8562, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_d616fcb2e1334b709ca51dcfb237fb6e, _group_east_12] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_d616fcb2e1334b709ca51dcfb237fb6e setDir -36.860497;
+	autogen_d616fcb2e1334b709ca51dcfb237fb6e setUnitAbility 0.60000002;
+	autogen_d616fcb2e1334b709ca51dcfb237fb6e setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_d616fcb2e1334b709ca51dcfb237fb6e];
+};
+// end of autogen_d616fcb2e1334b709ca51dcfb237fb6e
+// begin autogen_84338260cb1d4765929cd90d8730be76, part of group _group_east_12
+if (true) then
+{
+	autogen_84338260cb1d4765929cd90d8730be76 = _group_east_12 createUnit ["sfp_rus_tl", [5939.8677, 3061.2595, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_84338260cb1d4765929cd90d8730be76) then {
+		autogen_84338260cb1d4765929cd90d8730be76 = createVehicle ["sfp_rus_tl", [5939.8677, 3061.2595, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_84338260cb1d4765929cd90d8730be76, _group_east_12] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_84338260cb1d4765929cd90d8730be76 setDir -36.860497;
+	autogen_84338260cb1d4765929cd90d8730be76 setUnitAbility 0.60000002;
+	autogen_84338260cb1d4765929cd90d8730be76 setRank "LIEUTENANT";
+	if(true) then { _group_east_12 selectLeader autogen_84338260cb1d4765929cd90d8730be76; };
+	_createdUnits = _createdUnits + [autogen_84338260cb1d4765929cd90d8730be76];
+};
+// end of autogen_84338260cb1d4765929cd90d8730be76
+// begin autogen_e245ee9f8d554d3298a1bd71ab63af38, part of group _group_east_12
+if (true) then
+{
+	autogen_e245ee9f8d554d3298a1bd71ab63af38 = _group_east_12 createUnit ["sfp_rus_medic", [5944.2856, 3053.1282, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_e245ee9f8d554d3298a1bd71ab63af38) then {
+		autogen_e245ee9f8d554d3298a1bd71ab63af38 = createVehicle ["sfp_rus_medic", [5944.2856, 3053.1282, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_e245ee9f8d554d3298a1bd71ab63af38, _group_east_12] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_e245ee9f8d554d3298a1bd71ab63af38 setDir -36.860497;
+	autogen_e245ee9f8d554d3298a1bd71ab63af38 setUnitAbility 0.60000002;
+	autogen_e245ee9f8d554d3298a1bd71ab63af38 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_e245ee9f8d554d3298a1bd71ab63af38];
+};
+// end of autogen_e245ee9f8d554d3298a1bd71ab63af38
+// begin autogen_54e83873f63c4a949257a14ab2710138, part of group _group_east_12
+if (true) then
+{
+	autogen_54e83873f63c4a949257a14ab2710138 = _group_east_12 createUnit ["sfp_rus_at", [5947.2349, 3055.9197, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_54e83873f63c4a949257a14ab2710138) then {
+		autogen_54e83873f63c4a949257a14ab2710138 = createVehicle ["sfp_rus_at", [5947.2349, 3055.9197, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_54e83873f63c4a949257a14ab2710138, _group_east_12] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_54e83873f63c4a949257a14ab2710138 setDir -36.860497;
+	autogen_54e83873f63c4a949257a14ab2710138 setUnitAbility 0.60000002;
+	autogen_54e83873f63c4a949257a14ab2710138 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_54e83873f63c4a949257a14ab2710138];
+};
+// end of autogen_54e83873f63c4a949257a14ab2710138
+// begin autogen_7472b91bec3242c28d33d0bef112a994, part of group _group_east_12
+if (true) then
+{
+	autogen_7472b91bec3242c28d33d0bef112a994 = _group_east_12 createUnit ["sfp_rus_machinegunner", [5946.2847, 3059.9578, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_7472b91bec3242c28d33d0bef112a994) then {
+		autogen_7472b91bec3242c28d33d0bef112a994 = createVehicle ["sfp_rus_machinegunner", [5946.2847, 3059.9578, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_7472b91bec3242c28d33d0bef112a994, _group_east_12] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_7472b91bec3242c28d33d0bef112a994 setDir -36.860497;
+	autogen_7472b91bec3242c28d33d0bef112a994 setUnitAbility 0.60000002;
+	autogen_7472b91bec3242c28d33d0bef112a994 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_7472b91bec3242c28d33d0bef112a994];
+};
+// end of autogen_7472b91bec3242c28d33d0bef112a994
+// begin autogen_2e1288ae6dff4cf1a121f26bf362eaaf, part of group _group_east_12
+if (true) then
+{
+	autogen_2e1288ae6dff4cf1a121f26bf362eaaf = _group_east_12 createUnit ["sfp_rus_aa", [5945.937, 3063.1882, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_2e1288ae6dff4cf1a121f26bf362eaaf) then {
+		autogen_2e1288ae6dff4cf1a121f26bf362eaaf = createVehicle ["sfp_rus_aa", [5945.937, 3063.1882, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_2e1288ae6dff4cf1a121f26bf362eaaf, _group_east_12] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_2e1288ae6dff4cf1a121f26bf362eaaf setDir -36.860497;
+	autogen_2e1288ae6dff4cf1a121f26bf362eaaf setUnitAbility 0.60000002;
+	autogen_2e1288ae6dff4cf1a121f26bf362eaaf setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_2e1288ae6dff4cf1a121f26bf362eaaf];
+};
+// end of autogen_2e1288ae6dff4cf1a121f26bf362eaaf
+// begin autogen_45f9c752d8af43a7893469f02dcb330d, part of group _group_east_12
+if (true) then
+{
+	autogen_45f9c752d8af43a7893469f02dcb330d = _group_east_12 createUnit ["sfp_rus_rifleman", [5941.1733, 3055.9773, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_45f9c752d8af43a7893469f02dcb330d) then {
+		autogen_45f9c752d8af43a7893469f02dcb330d = createVehicle ["sfp_rus_rifleman", [5941.1733, 3055.9773, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_45f9c752d8af43a7893469f02dcb330d, _group_east_12] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_45f9c752d8af43a7893469f02dcb330d setDir -36.860497;
+	autogen_45f9c752d8af43a7893469f02dcb330d setUnitAbility 0.60000002;
+	autogen_45f9c752d8af43a7893469f02dcb330d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_45f9c752d8af43a7893469f02dcb330d];
+};
+// end of autogen_45f9c752d8af43a7893469f02dcb330d
+// group _group_east_13
+_group_east_13 = createGroup _eastHQ;
+// begin autogen_4c10fefd71554cca99463875cf1cc715, part of group _group_east_13
+if (true) then
+{
+	autogen_4c10fefd71554cca99463875cf1cc715 = _group_east_13 createUnit ["sfp_bmp1", [5943.9556, 3037.6462, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_4c10fefd71554cca99463875cf1cc715) then {
+		autogen_4c10fefd71554cca99463875cf1cc715 = createVehicle ["sfp_bmp1", [5943.9556, 3037.6462, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_4c10fefd71554cca99463875cf1cc715, _group_east_13] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_4c10fefd71554cca99463875cf1cc715 setDir -36.860497;
+	autogen_4c10fefd71554cca99463875cf1cc715 setUnitAbility 0.60000002;
+	autogen_4c10fefd71554cca99463875cf1cc715 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_4c10fefd71554cca99463875cf1cc715];
+};
+// end of autogen_4c10fefd71554cca99463875cf1cc715
+// begin autogen_a0e12f0b48f1456190ad3bfdd7fec31b, part of group _group_east_13
+if (true) then
+{
+	autogen_a0e12f0b48f1456190ad3bfdd7fec31b = _group_east_13 createUnit ["sfp_rus_tl", [5950.4272, 3044.0515, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_a0e12f0b48f1456190ad3bfdd7fec31b) then {
+		autogen_a0e12f0b48f1456190ad3bfdd7fec31b = createVehicle ["sfp_rus_tl", [5950.4272, 3044.0515, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_a0e12f0b48f1456190ad3bfdd7fec31b, _group_east_13] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_a0e12f0b48f1456190ad3bfdd7fec31b setDir -36.860497;
+	autogen_a0e12f0b48f1456190ad3bfdd7fec31b setUnitAbility 0.60000002;
+	autogen_a0e12f0b48f1456190ad3bfdd7fec31b setRank "LIEUTENANT";
+	if(true) then { _group_east_13 selectLeader autogen_a0e12f0b48f1456190ad3bfdd7fec31b; };
+	_createdUnits = _createdUnits + [autogen_a0e12f0b48f1456190ad3bfdd7fec31b];
+};
+// end of autogen_a0e12f0b48f1456190ad3bfdd7fec31b
+// begin autogen_b04de4adaf0541eabba884e87af0a1f0, part of group _group_east_13
+if (true) then
+{
+	autogen_b04de4adaf0541eabba884e87af0a1f0 = _group_east_13 createUnit ["sfp_rus_medic", [5954.8481, 3035.9182, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_b04de4adaf0541eabba884e87af0a1f0) then {
+		autogen_b04de4adaf0541eabba884e87af0a1f0 = createVehicle ["sfp_rus_medic", [5954.8481, 3035.9182, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_b04de4adaf0541eabba884e87af0a1f0, _group_east_13] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_b04de4adaf0541eabba884e87af0a1f0 setDir -36.860497;
+	autogen_b04de4adaf0541eabba884e87af0a1f0 setUnitAbility 0.60000002;
+	autogen_b04de4adaf0541eabba884e87af0a1f0 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_b04de4adaf0541eabba884e87af0a1f0];
+};
+// end of autogen_b04de4adaf0541eabba884e87af0a1f0
+// begin autogen_0673acb984f2476a83bf0548f21780f7, part of group _group_east_13
+if (true) then
+{
+	autogen_0673acb984f2476a83bf0548f21780f7 = _group_east_13 createUnit ["sfp_rus_at", [5957.7954, 3038.7068, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_0673acb984f2476a83bf0548f21780f7) then {
+		autogen_0673acb984f2476a83bf0548f21780f7 = createVehicle ["sfp_rus_at", [5957.7954, 3038.7068, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_0673acb984f2476a83bf0548f21780f7, _group_east_13] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_0673acb984f2476a83bf0548f21780f7 setDir -36.860497;
+	autogen_0673acb984f2476a83bf0548f21780f7 setUnitAbility 0.60000002;
+	autogen_0673acb984f2476a83bf0548f21780f7 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_0673acb984f2476a83bf0548f21780f7];
+};
+// end of autogen_0673acb984f2476a83bf0548f21780f7
+// begin autogen_75212f5303ea4bd592cba57a535d8b7a, part of group _group_east_13
+if (true) then
+{
+	autogen_75212f5303ea4bd592cba57a535d8b7a = _group_east_13 createUnit ["sfp_rus_machinegunner", [5956.8452, 3042.7507, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_75212f5303ea4bd592cba57a535d8b7a) then {
+		autogen_75212f5303ea4bd592cba57a535d8b7a = createVehicle ["sfp_rus_machinegunner", [5956.8452, 3042.7507, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_75212f5303ea4bd592cba57a535d8b7a, _group_east_13] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_75212f5303ea4bd592cba57a535d8b7a setDir -36.860497;
+	autogen_75212f5303ea4bd592cba57a535d8b7a setUnitAbility 0.60000002;
+	autogen_75212f5303ea4bd592cba57a535d8b7a setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_75212f5303ea4bd592cba57a535d8b7a];
+};
+// end of autogen_75212f5303ea4bd592cba57a535d8b7a
+// begin autogen_ee1865cdc8174360b485aff52e6dfd01, part of group _group_east_13
+if (true) then
+{
+	autogen_ee1865cdc8174360b485aff52e6dfd01 = _group_east_13 createUnit ["sfp_rus_rifleman", [5956.5015, 3045.9807, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_ee1865cdc8174360b485aff52e6dfd01) then {
+		autogen_ee1865cdc8174360b485aff52e6dfd01 = createVehicle ["sfp_rus_rifleman", [5956.5015, 3045.9807, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_ee1865cdc8174360b485aff52e6dfd01, _group_east_13] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_ee1865cdc8174360b485aff52e6dfd01 setDir -36.860497;
+	autogen_ee1865cdc8174360b485aff52e6dfd01 setUnitAbility 0.60000002;
+	autogen_ee1865cdc8174360b485aff52e6dfd01 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_ee1865cdc8174360b485aff52e6dfd01];
+};
+// end of autogen_ee1865cdc8174360b485aff52e6dfd01
+// begin autogen_6e11b6ba46554e2684176b334211eec9, part of group _group_east_13
+if (true) then
+{
+	autogen_6e11b6ba46554e2684176b334211eec9 = _group_east_13 createUnit ["sfp_rus_rifleman", [5951.7319, 3038.7717, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_6e11b6ba46554e2684176b334211eec9) then {
+		autogen_6e11b6ba46554e2684176b334211eec9 = createVehicle ["sfp_rus_rifleman", [5951.7319, 3038.7717, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_6e11b6ba46554e2684176b334211eec9, _group_east_13] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_6e11b6ba46554e2684176b334211eec9 setDir -36.860497;
+	autogen_6e11b6ba46554e2684176b334211eec9 setUnitAbility 0.60000002;
+	autogen_6e11b6ba46554e2684176b334211eec9 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_6e11b6ba46554e2684176b334211eec9];
+};
+// end of autogen_6e11b6ba46554e2684176b334211eec9
+
+/**
+ * Waypoints for group _group_east_13
+ */
+// waypoint #1
+_wp = _group_east_13 addWaypoint[[5940.3589, 3044.9084, 0], 0, 1];
+[_group_east_13, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_13, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_13, 1] setWaypointCompletionRadius 0;
+[_group_east_13, 1] setWaypointFormation "NO CHANGE";
+[_group_east_13, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_13, 1] setWaypointStatements["true", ""];
+[_group_east_13, 1] setWaypointType "GUARD";
+// group _group_east_14
+_group_east_14 = createGroup _eastHQ;
+// begin autogen_04d8424541de4361a3aa3c2ee96a81a6, part of group _group_east_14
+if (true) then
+{
+	autogen_04d8424541de4361a3aa3c2ee96a81a6 = _group_east_14 createUnit ["sfp_wamako_mil_bmp1", [5687.7446, 3031.3518, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_04d8424541de4361a3aa3c2ee96a81a6) then {
+		autogen_04d8424541de4361a3aa3c2ee96a81a6 = createVehicle ["sfp_wamako_mil_bmp1", [5687.7446, 3031.3518, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_04d8424541de4361a3aa3c2ee96a81a6, _group_east_14] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_04d8424541de4361a3aa3c2ee96a81a6 setDir -151.90593;
+	autogen_04d8424541de4361a3aa3c2ee96a81a6 setUnitAbility 0.60000002;
+	autogen_04d8424541de4361a3aa3c2ee96a81a6 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_04d8424541de4361a3aa3c2ee96a81a6];
+};
+// end of autogen_04d8424541de4361a3aa3c2ee96a81a6
+// begin autogen_81a771d75c8b48c5b3edd21321c85198, part of group _group_east_14
+if (true) then
+{
+	autogen_81a771d75c8b48c5b3edd21321c85198 = _group_east_14 createUnit ["sfp_rus_tl", [5679.2036, 3034.5046, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_81a771d75c8b48c5b3edd21321c85198) then {
+		autogen_81a771d75c8b48c5b3edd21321c85198 = createVehicle ["sfp_rus_tl", [5679.2036, 3034.5046, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_81a771d75c8b48c5b3edd21321c85198, _group_east_14] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_81a771d75c8b48c5b3edd21321c85198 setDir -151.90591;
+	autogen_81a771d75c8b48c5b3edd21321c85198 setUnitAbility 0.60000002;
+	autogen_81a771d75c8b48c5b3edd21321c85198 setRank "LIEUTENANT";
+	if(true) then { _group_east_14 selectLeader autogen_81a771d75c8b48c5b3edd21321c85198; };
+	_createdUnits = _createdUnits + [autogen_81a771d75c8b48c5b3edd21321c85198];
+};
+// end of autogen_81a771d75c8b48c5b3edd21321c85198
+// begin autogen_bd48ac54644a4006a161f43c73aaba43, part of group _group_east_14
+if (true) then
+{
+	autogen_bd48ac54644a4006a161f43c73aaba43 = _group_east_14 createUnit ["sfp_rus_medic", [5684.7002, 3041.9529, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_bd48ac54644a4006a161f43c73aaba43) then {
+		autogen_bd48ac54644a4006a161f43c73aaba43 = createVehicle ["sfp_rus_medic", [5684.7002, 3041.9529, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_bd48ac54644a4006a161f43c73aaba43, _group_east_14] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_bd48ac54644a4006a161f43c73aaba43 setDir -151.90591;
+	autogen_bd48ac54644a4006a161f43c73aaba43 setUnitAbility 0.60000002;
+	autogen_bd48ac54644a4006a161f43c73aaba43 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_bd48ac54644a4006a161f43c73aaba43];
+};
+// end of autogen_bd48ac54644a4006a161f43c73aaba43
+// begin autogen_77b77f90478e43f89356611b7ce7cffa, part of group _group_east_14
+if (true) then
+{
+	autogen_77b77f90478e43f89356611b7ce7cffa = _group_east_14 createUnit ["sfp_rus_at", [5680.9224, 3043.4417, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_77b77f90478e43f89356611b7ce7cffa) then {
+		autogen_77b77f90478e43f89356611b7ce7cffa = createVehicle ["sfp_rus_at", [5680.9224, 3043.4417, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_77b77f90478e43f89356611b7ce7cffa, _group_east_14] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_77b77f90478e43f89356611b7ce7cffa setDir -151.90591;
+	autogen_77b77f90478e43f89356611b7ce7cffa setUnitAbility 0.60000002;
+	autogen_77b77f90478e43f89356611b7ce7cffa setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_77b77f90478e43f89356611b7ce7cffa];
+};
+// end of autogen_77b77f90478e43f89356611b7ce7cffa
+// begin autogen_c890e938f3c14f629fc1dd99a0795c7f, part of group _group_east_14
+if (true) then
+{
+	autogen_c890e938f3c14f629fc1dd99a0795c7f = _group_east_14 createUnit ["sfp_rus_machinegunner", [5677.6636, 3040.8652, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_c890e938f3c14f629fc1dd99a0795c7f) then {
+		autogen_c890e938f3c14f629fc1dd99a0795c7f = createVehicle ["sfp_rus_machinegunner", [5677.6636, 3040.8652, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_c890e938f3c14f629fc1dd99a0795c7f, _group_east_14] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_c890e938f3c14f629fc1dd99a0795c7f setDir -151.90591;
+	autogen_c890e938f3c14f629fc1dd99a0795c7f setUnitAbility 0.60000002;
+	autogen_c890e938f3c14f629fc1dd99a0795c7f setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_c890e938f3c14f629fc1dd99a0795c7f];
+};
+// end of autogen_c890e938f3c14f629fc1dd99a0795c7f
+// begin autogen_29a88fdca10544d4816dfef7db886f9d, part of group _group_east_14
+if (true) then
+{
+	autogen_29a88fdca10544d4816dfef7db886f9d = _group_east_14 createUnit ["sfp_rus_aa", [5674.8823, 3039.1836, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_29a88fdca10544d4816dfef7db886f9d) then {
+		autogen_29a88fdca10544d4816dfef7db886f9d = createVehicle ["sfp_rus_aa", [5674.8823, 3039.1836, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_29a88fdca10544d4816dfef7db886f9d, _group_east_14] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_29a88fdca10544d4816dfef7db886f9d setDir -151.90591;
+	autogen_29a88fdca10544d4816dfef7db886f9d setUnitAbility 0.60000002;
+	autogen_29a88fdca10544d4816dfef7db886f9d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_29a88fdca10544d4816dfef7db886f9d];
+};
+// end of autogen_29a88fdca10544d4816dfef7db886f9d
+// begin autogen_b641bcd1ff424dcd91bd1d952de01fce, part of group _group_east_14
+if (true) then
+{
+	autogen_b641bcd1ff424dcd91bd1d952de01fce = _group_east_14 createUnit ["sfp_rus_rifleman", [5683.4341, 3037.9243, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_b641bcd1ff424dcd91bd1d952de01fce) then {
+		autogen_b641bcd1ff424dcd91bd1d952de01fce = createVehicle ["sfp_rus_rifleman", [5683.4341, 3037.9243, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_b641bcd1ff424dcd91bd1d952de01fce, _group_east_14] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_b641bcd1ff424dcd91bd1d952de01fce setDir -151.90591;
+	autogen_b641bcd1ff424dcd91bd1d952de01fce setUnitAbility 0.60000002;
+	autogen_b641bcd1ff424dcd91bd1d952de01fce setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_b641bcd1ff424dcd91bd1d952de01fce];
+};
+// end of autogen_b641bcd1ff424dcd91bd1d952de01fce
+
+/**
+ * Waypoints for group _group_east_14
+ */
+// waypoint #1
+_wp = _group_east_14 addWaypoint[[5640.5454, 3017.542, 0], 0, 1];
+[_group_east_14, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_14, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_14, 1] setWaypointCompletionRadius 0;
+[_group_east_14, 1] setWaypointFormation "NO CHANGE";
+[_group_east_14, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_14, 1] setWaypointStatements["true", ""];
+// waypoint #2
+_wp = _group_east_14 addWaypoint[[5620.5059, 2999.3486, 0], 0, 2];
+[_group_east_14, 2] setWaypointBehaviour "UNCHANGED";
+[_group_east_14, 2] setWaypointCombatMode "NO CHANGE";
+[_group_east_14, 2] setWaypointCompletionRadius 0;
+[_group_east_14, 2] setWaypointFormation "NO CHANGE";
+[_group_east_14, 2] setWaypointSpeed "UNCHANGED";
+[_group_east_14, 2] setWaypointStatements["true", ""];
+[_group_east_14, 2] setWaypointType "GUARD";
+// group _group_east_15
+_group_east_15 = createGroup _eastHQ;
+// begin autogen_0a7462020f75481a965d8a084032595d, part of group _group_east_15
+if (true) then
+{
+	autogen_0a7462020f75481a965d8a084032595d = _group_east_15 createUnit ["sfp_btr60", [5735.7476, 3095.262, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_0a7462020f75481a965d8a084032595d) then {
+		autogen_0a7462020f75481a965d8a084032595d = createVehicle ["sfp_btr60", [5735.7476, 3095.262, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_0a7462020f75481a965d8a084032595d, _group_east_15] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_0a7462020f75481a965d8a084032595d setDir -36.860497;
+	autogen_0a7462020f75481a965d8a084032595d setUnitAbility 0.60000002;
+	autogen_0a7462020f75481a965d8a084032595d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_0a7462020f75481a965d8a084032595d];
+};
+// end of autogen_0a7462020f75481a965d8a084032595d
+// begin autogen_64d6eea1e8b945b3ab5f826dadbb174a, part of group _group_east_15
+if (true) then
+{
+	autogen_64d6eea1e8b945b3ab5f826dadbb174a = _group_east_15 createUnit ["sfp_rus_tl", [5742.2183, 3101.6667, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_64d6eea1e8b945b3ab5f826dadbb174a) then {
+		autogen_64d6eea1e8b945b3ab5f826dadbb174a = createVehicle ["sfp_rus_tl", [5742.2183, 3101.6667, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_64d6eea1e8b945b3ab5f826dadbb174a, _group_east_15] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_64d6eea1e8b945b3ab5f826dadbb174a setDir -36.860497;
+	autogen_64d6eea1e8b945b3ab5f826dadbb174a setUnitAbility 0.60000002;
+	autogen_64d6eea1e8b945b3ab5f826dadbb174a setRank "LIEUTENANT";
+	if(true) then { _group_east_15 selectLeader autogen_64d6eea1e8b945b3ab5f826dadbb174a; };
+	_createdUnits = _createdUnits + [autogen_64d6eea1e8b945b3ab5f826dadbb174a];
+};
+// end of autogen_64d6eea1e8b945b3ab5f826dadbb174a
+// begin autogen_a1d0a5e4c4fe4f829245ed2b21773e1a, part of group _group_east_15
+if (true) then
+{
+	autogen_a1d0a5e4c4fe4f829245ed2b21773e1a = _group_east_15 createUnit ["sfp_rus_medic", [5746.6382, 3093.5354, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_a1d0a5e4c4fe4f829245ed2b21773e1a) then {
+		autogen_a1d0a5e4c4fe4f829245ed2b21773e1a = createVehicle ["sfp_rus_medic", [5746.6382, 3093.5354, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_a1d0a5e4c4fe4f829245ed2b21773e1a, _group_east_15] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_a1d0a5e4c4fe4f829245ed2b21773e1a setDir -36.860497;
+	autogen_a1d0a5e4c4fe4f829245ed2b21773e1a setUnitAbility 0.60000002;
+	autogen_a1d0a5e4c4fe4f829245ed2b21773e1a setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_a1d0a5e4c4fe4f829245ed2b21773e1a];
+};
+// end of autogen_a1d0a5e4c4fe4f829245ed2b21773e1a
+// begin autogen_4e0cc9681bef4ca5a55d0262f865201d, part of group _group_east_15
+if (true) then
+{
+	autogen_4e0cc9681bef4ca5a55d0262f865201d = _group_east_15 createUnit ["sfp_rus_at", [5749.5884, 3096.323, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_4e0cc9681bef4ca5a55d0262f865201d) then {
+		autogen_4e0cc9681bef4ca5a55d0262f865201d = createVehicle ["sfp_rus_at", [5749.5884, 3096.323, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_4e0cc9681bef4ca5a55d0262f865201d, _group_east_15] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_4e0cc9681bef4ca5a55d0262f865201d setDir -36.860497;
+	autogen_4e0cc9681bef4ca5a55d0262f865201d setUnitAbility 0.60000002;
+	autogen_4e0cc9681bef4ca5a55d0262f865201d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_4e0cc9681bef4ca5a55d0262f865201d];
+};
+// end of autogen_4e0cc9681bef4ca5a55d0262f865201d
+// begin autogen_f354c24588a04b15a7a4f5b9c957e96b, part of group _group_east_15
+if (true) then
+{
+	autogen_f354c24588a04b15a7a4f5b9c957e96b = _group_east_15 createUnit ["sfp_rus_machinegunner", [5748.6353, 3100.3665, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_f354c24588a04b15a7a4f5b9c957e96b) then {
+		autogen_f354c24588a04b15a7a4f5b9c957e96b = createVehicle ["sfp_rus_machinegunner", [5748.6353, 3100.3665, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_f354c24588a04b15a7a4f5b9c957e96b, _group_east_15] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_f354c24588a04b15a7a4f5b9c957e96b setDir -36.860497;
+	autogen_f354c24588a04b15a7a4f5b9c957e96b setUnitAbility 0.60000002;
+	autogen_f354c24588a04b15a7a4f5b9c957e96b setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_f354c24588a04b15a7a4f5b9c957e96b];
+};
+// end of autogen_f354c24588a04b15a7a4f5b9c957e96b
+// begin autogen_1c3f103f80a94db7b68e4ded9bf51777, part of group _group_east_15
+if (true) then
+{
+	autogen_1c3f103f80a94db7b68e4ded9bf51777 = _group_east_15 createUnit ["sfp_rus_aa", [5748.2915, 3103.5969, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_1c3f103f80a94db7b68e4ded9bf51777) then {
+		autogen_1c3f103f80a94db7b68e4ded9bf51777 = createVehicle ["sfp_rus_aa", [5748.2915, 3103.5969, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_1c3f103f80a94db7b68e4ded9bf51777, _group_east_15] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_1c3f103f80a94db7b68e4ded9bf51777 setDir -36.860497;
+	autogen_1c3f103f80a94db7b68e4ded9bf51777 setUnitAbility 0.60000002;
+	autogen_1c3f103f80a94db7b68e4ded9bf51777 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_1c3f103f80a94db7b68e4ded9bf51777];
+};
+// end of autogen_1c3f103f80a94db7b68e4ded9bf51777
+// begin autogen_bef92c41947342ba9f66ad1ada125e5e, part of group _group_east_15
+if (true) then
+{
+	autogen_bef92c41947342ba9f66ad1ada125e5e = _group_east_15 createUnit ["sfp_rus_rifleman", [5743.5278, 3096.3835, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_bef92c41947342ba9f66ad1ada125e5e) then {
+		autogen_bef92c41947342ba9f66ad1ada125e5e = createVehicle ["sfp_rus_rifleman", [5743.5278, 3096.3835, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_bef92c41947342ba9f66ad1ada125e5e, _group_east_15] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_bef92c41947342ba9f66ad1ada125e5e setDir -36.860497;
+	autogen_bef92c41947342ba9f66ad1ada125e5e setUnitAbility 0.60000002;
+	autogen_bef92c41947342ba9f66ad1ada125e5e setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_bef92c41947342ba9f66ad1ada125e5e];
+};
+// end of autogen_bef92c41947342ba9f66ad1ada125e5e
+
+/**
+ * Waypoints for group _group_east_15
+ */
+// waypoint #1
+_wp = _group_east_15 addWaypoint[[5733.3569, 3113.3167, 0], 0, 1];
+[_group_east_15, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_15, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_15, 1] setWaypointCompletionRadius 0;
+[_group_east_15, 1] setWaypointFormation "NO CHANGE";
+[_group_east_15, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_15, 1] setWaypointStatements["true", ""];
+[_group_east_15, 1] setWaypointType "GUARD";
+// group _group_east_16
+_group_east_16 = createGroup _eastHQ;
+// begin autogen_beecbda43a4f430db1fc3f2bc05d9ae6, part of group _group_east_16
+if (true) then
+{
+	autogen_beecbda43a4f430db1fc3f2bc05d9ae6 = _group_east_16 createUnit ["sfp_btr60", [5746.3091, 3078.05, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_beecbda43a4f430db1fc3f2bc05d9ae6) then {
+		autogen_beecbda43a4f430db1fc3f2bc05d9ae6 = createVehicle ["sfp_btr60", [5746.3091, 3078.05, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_beecbda43a4f430db1fc3f2bc05d9ae6, _group_east_16] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_beecbda43a4f430db1fc3f2bc05d9ae6 setDir -36.860497;
+	autogen_beecbda43a4f430db1fc3f2bc05d9ae6 setUnitAbility 0.60000002;
+	autogen_beecbda43a4f430db1fc3f2bc05d9ae6 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_beecbda43a4f430db1fc3f2bc05d9ae6];
+};
+// end of autogen_beecbda43a4f430db1fc3f2bc05d9ae6
+// begin autogen_d04015e500ed4f38a11f5b3310775774, part of group _group_east_16
+if (true) then
+{
+	autogen_d04015e500ed4f38a11f5b3310775774 = _group_east_16 createUnit ["sfp_rus_tl", [5752.7817, 3084.4568, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_d04015e500ed4f38a11f5b3310775774) then {
+		autogen_d04015e500ed4f38a11f5b3310775774 = createVehicle ["sfp_rus_tl", [5752.7817, 3084.4568, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_d04015e500ed4f38a11f5b3310775774, _group_east_16] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_d04015e500ed4f38a11f5b3310775774 setDir -36.860497;
+	autogen_d04015e500ed4f38a11f5b3310775774 setUnitAbility 0.60000002;
+	autogen_d04015e500ed4f38a11f5b3310775774 setRank "LIEUTENANT";
+	if(true) then { _group_east_16 selectLeader autogen_d04015e500ed4f38a11f5b3310775774; };
+	_createdUnits = _createdUnits + [autogen_d04015e500ed4f38a11f5b3310775774];
+};
+// end of autogen_d04015e500ed4f38a11f5b3310775774
+// begin autogen_77a7eeba380843609df69c3005b10959, part of group _group_east_16
+if (true) then
+{
+	autogen_77a7eeba380843609df69c3005b10959 = _group_east_16 createUnit ["sfp_rus_medic", [5757.2007, 3076.325, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_77a7eeba380843609df69c3005b10959) then {
+		autogen_77a7eeba380843609df69c3005b10959 = createVehicle ["sfp_rus_medic", [5757.2007, 3076.325, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_77a7eeba380843609df69c3005b10959, _group_east_16] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_77a7eeba380843609df69c3005b10959 setDir -36.860497;
+	autogen_77a7eeba380843609df69c3005b10959 setUnitAbility 0.60000002;
+	autogen_77a7eeba380843609df69c3005b10959 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_77a7eeba380843609df69c3005b10959];
+};
+// end of autogen_77a7eeba380843609df69c3005b10959
+// begin autogen_3ac34018ed0640c49f9525fa3996a688, part of group _group_east_16
+if (true) then
+{
+	autogen_3ac34018ed0640c49f9525fa3996a688 = _group_east_16 createUnit ["sfp_rus_at", [5760.147, 3079.116, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_3ac34018ed0640c49f9525fa3996a688) then {
+		autogen_3ac34018ed0640c49f9525fa3996a688 = createVehicle ["sfp_rus_at", [5760.147, 3079.116, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_3ac34018ed0640c49f9525fa3996a688, _group_east_16] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_3ac34018ed0640c49f9525fa3996a688 setDir -36.860497;
+	autogen_3ac34018ed0640c49f9525fa3996a688 setUnitAbility 0.60000002;
+	autogen_3ac34018ed0640c49f9525fa3996a688 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_3ac34018ed0640c49f9525fa3996a688];
+};
+// end of autogen_3ac34018ed0640c49f9525fa3996a688
+// begin autogen_ad26ba4b134144b992a843da420d4e4d, part of group _group_east_16
+if (true) then
+{
+	autogen_ad26ba4b134144b992a843da420d4e4d = _group_east_16 createUnit ["sfp_rus_machinegunner", [5759.1968, 3083.1575, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_ad26ba4b134144b992a843da420d4e4d) then {
+		autogen_ad26ba4b134144b992a843da420d4e4d = createVehicle ["sfp_rus_machinegunner", [5759.1968, 3083.1575, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_ad26ba4b134144b992a843da420d4e4d, _group_east_16] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_ad26ba4b134144b992a843da420d4e4d setDir -36.860497;
+	autogen_ad26ba4b134144b992a843da420d4e4d setUnitAbility 0.60000002;
+	autogen_ad26ba4b134144b992a843da420d4e4d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_ad26ba4b134144b992a843da420d4e4d];
+};
+// end of autogen_ad26ba4b134144b992a843da420d4e4d
+// begin autogen_8c9b45318dba452d89f44dfa664519d0, part of group _group_east_16
+if (true) then
+{
+	autogen_8c9b45318dba452d89f44dfa664519d0 = _group_east_16 createUnit ["sfp_rus_rifleman", [5758.854, 3086.3879, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_8c9b45318dba452d89f44dfa664519d0) then {
+		autogen_8c9b45318dba452d89f44dfa664519d0 = createVehicle ["sfp_rus_rifleman", [5758.854, 3086.3879, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_8c9b45318dba452d89f44dfa664519d0, _group_east_16] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_8c9b45318dba452d89f44dfa664519d0 setDir -36.860497;
+	autogen_8c9b45318dba452d89f44dfa664519d0 setUnitAbility 0.60000002;
+	autogen_8c9b45318dba452d89f44dfa664519d0 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_8c9b45318dba452d89f44dfa664519d0];
+};
+// end of autogen_8c9b45318dba452d89f44dfa664519d0
+// begin autogen_37f111f8bea7466499f5d2e364a2414e, part of group _group_east_16
+if (true) then
+{
+	autogen_37f111f8bea7466499f5d2e364a2414e = _group_east_16 createUnit ["sfp_rus_rifleman", [5754.0874, 3079.1775, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_37f111f8bea7466499f5d2e364a2414e) then {
+		autogen_37f111f8bea7466499f5d2e364a2414e = createVehicle ["sfp_rus_rifleman", [5754.0874, 3079.1775, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_37f111f8bea7466499f5d2e364a2414e, _group_east_16] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_37f111f8bea7466499f5d2e364a2414e setDir -36.860497;
+	autogen_37f111f8bea7466499f5d2e364a2414e setUnitAbility 0.60000002;
+	autogen_37f111f8bea7466499f5d2e364a2414e setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_37f111f8bea7466499f5d2e364a2414e];
+};
+// end of autogen_37f111f8bea7466499f5d2e364a2414e
+
+/**
+ * Waypoints for group _group_east_16
+ */
+// waypoint #1
+_wp = _group_east_16 addWaypoint[[5742.7104, 3085.3157, 0], 0, 1];
+[_group_east_16, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_16, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_16, 1] setWaypointCompletionRadius 0;
+[_group_east_16, 1] setWaypointFormation "NO CHANGE";
+[_group_east_16, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_16, 1] setWaypointStatements["true", ""];
+[_group_east_16, 1] setWaypointType "GUARD";
+// group _group_east_17
+_group_east_17 = createGroup _eastHQ;
+// begin autogen_e22acf719b6e40e896aa6c8e397955e9, part of group _group_east_17
+if (true) then
+{
+	autogen_e22acf719b6e40e896aa6c8e397955e9 = _group_east_17 createUnit ["sfp_uaz", [5665.5913, 2973.1528, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_e22acf719b6e40e896aa6c8e397955e9) then {
+		autogen_e22acf719b6e40e896aa6c8e397955e9 = createVehicle ["sfp_uaz", [5665.5913, 2973.1528, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_e22acf719b6e40e896aa6c8e397955e9, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_e22acf719b6e40e896aa6c8e397955e9 setDir -36.8605;
+	autogen_e22acf719b6e40e896aa6c8e397955e9 setUnitAbility 0.60000002;
+	autogen_e22acf719b6e40e896aa6c8e397955e9 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_e22acf719b6e40e896aa6c8e397955e9];
+};
+// end of autogen_e22acf719b6e40e896aa6c8e397955e9
+// begin autogen_aa063a669a0548a98103ac5af7f26644, part of group _group_east_17
+if (true) then
+{
+	autogen_aa063a669a0548a98103ac5af7f26644 = _group_east_17 createUnit ["sfp_rus_tl", [5672.063, 2979.5601, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_aa063a669a0548a98103ac5af7f26644) then {
+		autogen_aa063a669a0548a98103ac5af7f26644 = createVehicle ["sfp_rus_tl", [5672.063, 2979.5601, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_aa063a669a0548a98103ac5af7f26644, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_aa063a669a0548a98103ac5af7f26644 setDir -36.860497;
+	autogen_aa063a669a0548a98103ac5af7f26644 setUnitAbility 0.60000002;
+	autogen_aa063a669a0548a98103ac5af7f26644 setRank "LIEUTENANT";
+	if(true) then { _group_east_17 selectLeader autogen_aa063a669a0548a98103ac5af7f26644; };
+	_createdUnits = _createdUnits + [autogen_aa063a669a0548a98103ac5af7f26644];
+};
+// end of autogen_aa063a669a0548a98103ac5af7f26644
+// begin autogen_3cd086ad2bfc4aec85316c17dcb97010, part of group _group_east_17
+if (true) then
+{
+	autogen_3cd086ad2bfc4aec85316c17dcb97010 = _group_east_17 createUnit ["sfp_rus_medic", [5676.4858, 2971.4253, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_3cd086ad2bfc4aec85316c17dcb97010) then {
+		autogen_3cd086ad2bfc4aec85316c17dcb97010 = createVehicle ["sfp_rus_medic", [5676.4858, 2971.4253, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_3cd086ad2bfc4aec85316c17dcb97010, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_3cd086ad2bfc4aec85316c17dcb97010 setDir -36.860497;
+	autogen_3cd086ad2bfc4aec85316c17dcb97010 setUnitAbility 0.60000002;
+	autogen_3cd086ad2bfc4aec85316c17dcb97010 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_3cd086ad2bfc4aec85316c17dcb97010];
+};
+// end of autogen_3cd086ad2bfc4aec85316c17dcb97010
+// begin autogen_e91bc79a7a84444aa22e504870b2738c, part of group _group_east_17
+if (true) then
+{
+	autogen_e91bc79a7a84444aa22e504870b2738c = _group_east_17 createUnit ["sfp_rus_at", [5679.4292, 2974.2178, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_e91bc79a7a84444aa22e504870b2738c) then {
+		autogen_e91bc79a7a84444aa22e504870b2738c = createVehicle ["sfp_rus_at", [5679.4292, 2974.2178, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_e91bc79a7a84444aa22e504870b2738c, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_e91bc79a7a84444aa22e504870b2738c setDir -36.860497;
+	autogen_e91bc79a7a84444aa22e504870b2738c setUnitAbility 0.60000002;
+	autogen_e91bc79a7a84444aa22e504870b2738c setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_e91bc79a7a84444aa22e504870b2738c];
+};
+// end of autogen_e91bc79a7a84444aa22e504870b2738c
+// begin autogen_7ea3b25ad2ba4a65be972464346cca8a, part of group _group_east_17
+if (true) then
+{
+	autogen_7ea3b25ad2ba4a65be972464346cca8a = _group_east_17 createUnit ["sfp_rus_machinegunner", [5678.4771, 2978.2607, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_7ea3b25ad2ba4a65be972464346cca8a) then {
+		autogen_7ea3b25ad2ba4a65be972464346cca8a = createVehicle ["sfp_rus_machinegunner", [5678.4771, 2978.2607, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_7ea3b25ad2ba4a65be972464346cca8a, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_7ea3b25ad2ba4a65be972464346cca8a setDir -36.860497;
+	autogen_7ea3b25ad2ba4a65be972464346cca8a setUnitAbility 0.60000002;
+	autogen_7ea3b25ad2ba4a65be972464346cca8a setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_7ea3b25ad2ba4a65be972464346cca8a];
+};
+// end of autogen_7ea3b25ad2ba4a65be972464346cca8a
+// begin autogen_a4c10ad6f2c3480aa34cb9e818921507, part of group _group_east_17
+if (true) then
+{
+	autogen_a4c10ad6f2c3480aa34cb9e818921507 = _group_east_17 createUnit ["sfp_rus_aa", [5678.1343, 2981.4912, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_a4c10ad6f2c3480aa34cb9e818921507) then {
+		autogen_a4c10ad6f2c3480aa34cb9e818921507 = createVehicle ["sfp_rus_aa", [5678.1343, 2981.4912, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_a4c10ad6f2c3480aa34cb9e818921507, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_a4c10ad6f2c3480aa34cb9e818921507 setDir -36.860497;
+	autogen_a4c10ad6f2c3480aa34cb9e818921507 setUnitAbility 0.60000002;
+	autogen_a4c10ad6f2c3480aa34cb9e818921507 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_a4c10ad6f2c3480aa34cb9e818921507];
+};
+// end of autogen_a4c10ad6f2c3480aa34cb9e818921507
+// begin autogen_97beae33215f4af9a7b1beb27bb71765, part of group _group_east_17
+if (true) then
+{
+	autogen_97beae33215f4af9a7b1beb27bb71765 = _group_east_17 createUnit ["sfp_rus_rifleman", [5673.3706, 2974.2773, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_97beae33215f4af9a7b1beb27bb71765) then {
+		autogen_97beae33215f4af9a7b1beb27bb71765 = createVehicle ["sfp_rus_rifleman", [5673.3706, 2974.2773, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_97beae33215f4af9a7b1beb27bb71765, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_97beae33215f4af9a7b1beb27bb71765 setDir -36.860497;
+	autogen_97beae33215f4af9a7b1beb27bb71765 setUnitAbility 0.60000002;
+	autogen_97beae33215f4af9a7b1beb27bb71765 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_97beae33215f4af9a7b1beb27bb71765];
+};
+// end of autogen_97beae33215f4af9a7b1beb27bb71765
+// begin autogen_fe696b3fc0e54470aec8c1ca2e66200e, part of group _group_east_17
+if (true) then
+{
+	autogen_fe696b3fc0e54470aec8c1ca2e66200e = _group_east_17 createUnit ["sfp_uaz", [5676.27, 2963.3989, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_fe696b3fc0e54470aec8c1ca2e66200e) then {
+		autogen_fe696b3fc0e54470aec8c1ca2e66200e = createVehicle ["sfp_uaz", [5676.27, 2963.3989, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_fe696b3fc0e54470aec8c1ca2e66200e, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_fe696b3fc0e54470aec8c1ca2e66200e setDir -36.860497;
+	autogen_fe696b3fc0e54470aec8c1ca2e66200e setUnitAbility 0.60000002;
+	autogen_fe696b3fc0e54470aec8c1ca2e66200e setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_fe696b3fc0e54470aec8c1ca2e66200e];
+};
+// end of autogen_fe696b3fc0e54470aec8c1ca2e66200e
+// begin autogen_2db3c9eeb0c14df992280ea40fd5dc69, part of group _group_east_17
+if (true) then
+{
+	autogen_2db3c9eeb0c14df992280ea40fd5dc69 = _group_east_17 createUnit ["O_Truck_02_Ammo_F", [5685.9468, 2965.5146, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_2db3c9eeb0c14df992280ea40fd5dc69) then {
+		autogen_2db3c9eeb0c14df992280ea40fd5dc69 = createVehicle ["O_Truck_02_Ammo_F", [5685.9468, 2965.5146, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_2db3c9eeb0c14df992280ea40fd5dc69, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_2db3c9eeb0c14df992280ea40fd5dc69 setDir -36.860497;
+	autogen_2db3c9eeb0c14df992280ea40fd5dc69 setUnitAbility 0.60000002;
+	autogen_2db3c9eeb0c14df992280ea40fd5dc69 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_2db3c9eeb0c14df992280ea40fd5dc69];
+};
+// end of autogen_2db3c9eeb0c14df992280ea40fd5dc69
+// begin autogen_f157a3743fc04b098b781aca0eaea303, part of group _group_east_17
+if (true) then
+{
+	autogen_f157a3743fc04b098b781aca0eaea303 = _group_east_17 createUnit ["O_Truck_02_box_F", [5692.3521, 2955.7427, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_f157a3743fc04b098b781aca0eaea303) then {
+		autogen_f157a3743fc04b098b781aca0eaea303 = createVehicle ["O_Truck_02_box_F", [5692.3521, 2955.7427, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_f157a3743fc04b098b781aca0eaea303, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_f157a3743fc04b098b781aca0eaea303 setDir -36.860497;
+	autogen_f157a3743fc04b098b781aca0eaea303 setUnitAbility 0.60000002;
+	autogen_f157a3743fc04b098b781aca0eaea303 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_f157a3743fc04b098b781aca0eaea303];
+};
+// end of autogen_f157a3743fc04b098b781aca0eaea303
+// begin autogen_d1b45d71e23a440880b1dbdb06abbfd5, part of group _group_east_17
+if (true) then
+{
+	autogen_d1b45d71e23a440880b1dbdb06abbfd5 = _group_east_17 createUnit ["O_Truck_02_fuel_F", [5684.9282, 2951.0161, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_d1b45d71e23a440880b1dbdb06abbfd5) then {
+		autogen_d1b45d71e23a440880b1dbdb06abbfd5 = createVehicle ["O_Truck_02_fuel_F", [5684.9282, 2951.0161, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_d1b45d71e23a440880b1dbdb06abbfd5, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_d1b45d71e23a440880b1dbdb06abbfd5 setDir -36.860497;
+	autogen_d1b45d71e23a440880b1dbdb06abbfd5 setUnitAbility 0.60000002;
+	autogen_d1b45d71e23a440880b1dbdb06abbfd5 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_d1b45d71e23a440880b1dbdb06abbfd5];
+};
+// end of autogen_d1b45d71e23a440880b1dbdb06abbfd5
+// begin autogen_841b1a81970e4745ad39f1d475bda4d6, part of group _group_east_17
+if (true) then
+{
+	autogen_841b1a81970e4745ad39f1d475bda4d6 = _group_east_17 createUnit ["sfp_btr60", [5698.9702, 2961.2085, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_841b1a81970e4745ad39f1d475bda4d6) then {
+		autogen_841b1a81970e4745ad39f1d475bda4d6 = createVehicle ["sfp_btr60", [5698.9702, 2961.2085, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_841b1a81970e4745ad39f1d475bda4d6, _group_east_17] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_841b1a81970e4745ad39f1d475bda4d6 setDir -36.8605;
+	autogen_841b1a81970e4745ad39f1d475bda4d6 setUnitAbility 0.60000002;
+	autogen_841b1a81970e4745ad39f1d475bda4d6 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_841b1a81970e4745ad39f1d475bda4d6];
+};
+// end of autogen_841b1a81970e4745ad39f1d475bda4d6
+
+/**
+ * Waypoints for group _group_east_17
+ */
+// waypoint #1
+_wp = _group_east_17 addWaypoint[[5665.8413, 2987.8398, 0], 0, 1];
+[_group_east_17, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_17, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_17, 1] setWaypointCompletionRadius 0;
+[_group_east_17, 1] setWaypointFormation "NO CHANGE";
+[_group_east_17, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_17, 1] setWaypointStatements["true", ""];
+[_group_east_17, 1] setWaypointType "SUPPORT";
+// group _group_east_18
+_group_east_18 = createGroup _eastHQ;
+// begin autogen_bad9225855274b9c854eaf7cd6a136ed, part of group _group_east_18
+if (true) then
+{
+	autogen_bad9225855274b9c854eaf7cd6a136ed = _group_east_18 createUnit ["sfp_btr60", [5768.7622, 3167.824, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_bad9225855274b9c854eaf7cd6a136ed) then {
+		autogen_bad9225855274b9c854eaf7cd6a136ed = createVehicle ["sfp_btr60", [5768.7622, 3167.824, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_bad9225855274b9c854eaf7cd6a136ed, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_bad9225855274b9c854eaf7cd6a136ed setDir -36.8605;
+	autogen_bad9225855274b9c854eaf7cd6a136ed setUnitAbility 0.60000002;
+	autogen_bad9225855274b9c854eaf7cd6a136ed setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_bad9225855274b9c854eaf7cd6a136ed];
+};
+// end of autogen_bad9225855274b9c854eaf7cd6a136ed
+// begin autogen_aad72b6477274472ab6aef9fface51a8, part of group _group_east_18
+if (true) then
+{
+	autogen_aad72b6477274472ab6aef9fface51a8 = _group_east_18 createUnit ["sfp_rus_tl", [5775.2358, 3174.2273, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_aad72b6477274472ab6aef9fface51a8) then {
+		autogen_aad72b6477274472ab6aef9fface51a8 = createVehicle ["sfp_rus_tl", [5775.2358, 3174.2273, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_aad72b6477274472ab6aef9fface51a8, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_aad72b6477274472ab6aef9fface51a8 setDir -36.860497;
+	autogen_aad72b6477274472ab6aef9fface51a8 setUnitAbility 0.60000002;
+	autogen_aad72b6477274472ab6aef9fface51a8 setRank "LIEUTENANT";
+	if(true) then { _group_east_18 selectLeader autogen_aad72b6477274472ab6aef9fface51a8; };
+	_createdUnits = _createdUnits + [autogen_aad72b6477274472ab6aef9fface51a8];
+};
+// end of autogen_aad72b6477274472ab6aef9fface51a8
+// begin autogen_594a73567dca49fcbbb14820742fda55, part of group _group_east_18
+if (true) then
+{
+	autogen_594a73567dca49fcbbb14820742fda55 = _group_east_18 createUnit ["sfp_rus_medic", [5779.6558, 3166.0969, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_594a73567dca49fcbbb14820742fda55) then {
+		autogen_594a73567dca49fcbbb14820742fda55 = createVehicle ["sfp_rus_medic", [5779.6558, 3166.0969, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_594a73567dca49fcbbb14820742fda55, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_594a73567dca49fcbbb14820742fda55 setDir -36.860497;
+	autogen_594a73567dca49fcbbb14820742fda55 setUnitAbility 0.60000002;
+	autogen_594a73567dca49fcbbb14820742fda55 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_594a73567dca49fcbbb14820742fda55];
+};
+// end of autogen_594a73567dca49fcbbb14820742fda55
+// begin autogen_80d6f78a3fac4a14ab04cb0b02e7d147, part of group _group_east_18
+if (true) then
+{
+	autogen_80d6f78a3fac4a14ab04cb0b02e7d147 = _group_east_18 createUnit ["sfp_rus_at", [5782.6001, 3168.8875, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_80d6f78a3fac4a14ab04cb0b02e7d147) then {
+		autogen_80d6f78a3fac4a14ab04cb0b02e7d147 = createVehicle ["sfp_rus_at", [5782.6001, 3168.8875, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_80d6f78a3fac4a14ab04cb0b02e7d147, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_80d6f78a3fac4a14ab04cb0b02e7d147 setDir -36.860497;
+	autogen_80d6f78a3fac4a14ab04cb0b02e7d147 setUnitAbility 0.60000002;
+	autogen_80d6f78a3fac4a14ab04cb0b02e7d147 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_80d6f78a3fac4a14ab04cb0b02e7d147];
+};
+// end of autogen_80d6f78a3fac4a14ab04cb0b02e7d147
+// begin autogen_407b798bf8044031847bbf962deff4ef, part of group _group_east_18
+if (true) then
+{
+	autogen_407b798bf8044031847bbf962deff4ef = _group_east_18 createUnit ["sfp_rus_machinegunner", [5781.6509, 3172.927, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_407b798bf8044031847bbf962deff4ef) then {
+		autogen_407b798bf8044031847bbf962deff4ef = createVehicle ["sfp_rus_machinegunner", [5781.6509, 3172.927, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_407b798bf8044031847bbf962deff4ef, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_407b798bf8044031847bbf962deff4ef setDir -36.860497;
+	autogen_407b798bf8044031847bbf962deff4ef setUnitAbility 0.60000002;
+	autogen_407b798bf8044031847bbf962deff4ef setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_407b798bf8044031847bbf962deff4ef];
+};
+// end of autogen_407b798bf8044031847bbf962deff4ef
+// begin autogen_36d7424ab0014242979d11d2d843a39f, part of group _group_east_18
+if (true) then
+{
+	autogen_36d7424ab0014242979d11d2d843a39f = _group_east_18 createUnit ["sfp_rus_aa", [5781.3071, 3176.1594, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_36d7424ab0014242979d11d2d843a39f) then {
+		autogen_36d7424ab0014242979d11d2d843a39f = createVehicle ["sfp_rus_aa", [5781.3071, 3176.1594, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_36d7424ab0014242979d11d2d843a39f, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_36d7424ab0014242979d11d2d843a39f setDir -36.860497;
+	autogen_36d7424ab0014242979d11d2d843a39f setUnitAbility 0.60000002;
+	autogen_36d7424ab0014242979d11d2d843a39f setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_36d7424ab0014242979d11d2d843a39f];
+};
+// end of autogen_36d7424ab0014242979d11d2d843a39f
+// begin autogen_74a635974e9047ab87c243416ff3be09, part of group _group_east_18
+if (true) then
+{
+	autogen_74a635974e9047ab87c243416ff3be09 = _group_east_18 createUnit ["sfp_rus_rifleman", [5776.5386, 3168.9465, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_74a635974e9047ab87c243416ff3be09) then {
+		autogen_74a635974e9047ab87c243416ff3be09 = createVehicle ["sfp_rus_rifleman", [5776.5386, 3168.9465, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_74a635974e9047ab87c243416ff3be09, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_74a635974e9047ab87c243416ff3be09 setDir -36.860497;
+	autogen_74a635974e9047ab87c243416ff3be09 setUnitAbility 0.60000002;
+	autogen_74a635974e9047ab87c243416ff3be09 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_74a635974e9047ab87c243416ff3be09];
+};
+// end of autogen_74a635974e9047ab87c243416ff3be09
+// begin autogen_c4cc86a3bdf6401b952ede5fa3de1b50, part of group _group_east_18
+if (true) then
+{
+	autogen_c4cc86a3bdf6401b952ede5fa3de1b50 = _group_east_18 createUnit ["sfp_uaz", [5779.4438, 3158.0662, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_c4cc86a3bdf6401b952ede5fa3de1b50) then {
+		autogen_c4cc86a3bdf6401b952ede5fa3de1b50 = createVehicle ["sfp_uaz", [5779.4438, 3158.0662, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_c4cc86a3bdf6401b952ede5fa3de1b50, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_c4cc86a3bdf6401b952ede5fa3de1b50 setDir -36.860497;
+	autogen_c4cc86a3bdf6401b952ede5fa3de1b50 setUnitAbility 0.60000002;
+	autogen_c4cc86a3bdf6401b952ede5fa3de1b50 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_c4cc86a3bdf6401b952ede5fa3de1b50];
+};
+// end of autogen_c4cc86a3bdf6401b952ede5fa3de1b50
+// begin autogen_3cf0001b46534d02aaa95eb6d33228fd, part of group _group_east_18
+if (true) then
+{
+	autogen_3cf0001b46534d02aaa95eb6d33228fd = _group_east_18 createUnit ["O_Truck_02_Ammo_F", [5789.1167, 3160.1853, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_3cf0001b46534d02aaa95eb6d33228fd) then {
+		autogen_3cf0001b46534d02aaa95eb6d33228fd = createVehicle ["O_Truck_02_Ammo_F", [5789.1167, 3160.1853, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_3cf0001b46534d02aaa95eb6d33228fd, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_3cf0001b46534d02aaa95eb6d33228fd setDir -36.860497;
+	autogen_3cf0001b46534d02aaa95eb6d33228fd setUnitAbility 0.60000002;
+	autogen_3cf0001b46534d02aaa95eb6d33228fd setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_3cf0001b46534d02aaa95eb6d33228fd];
+};
+// end of autogen_3cf0001b46534d02aaa95eb6d33228fd
+// begin autogen_913d0d26d57740cea70082073a80eec1, part of group _group_east_18
+if (true) then
+{
+	autogen_913d0d26d57740cea70082073a80eec1 = _group_east_18 createUnit ["O_Truck_02_box_F", [5795.5229, 3150.4124, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_913d0d26d57740cea70082073a80eec1) then {
+		autogen_913d0d26d57740cea70082073a80eec1 = createVehicle ["O_Truck_02_box_F", [5795.5229, 3150.4124, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_913d0d26d57740cea70082073a80eec1, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_913d0d26d57740cea70082073a80eec1 setDir -36.860497;
+	autogen_913d0d26d57740cea70082073a80eec1 setUnitAbility 0.60000002;
+	autogen_913d0d26d57740cea70082073a80eec1 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_913d0d26d57740cea70082073a80eec1];
+};
+// end of autogen_913d0d26d57740cea70082073a80eec1
+// begin autogen_d2fddeabd0cd445c9a3b27d58f3086ad, part of group _group_east_18
+if (true) then
+{
+	autogen_d2fddeabd0cd445c9a3b27d58f3086ad = _group_east_18 createUnit ["O_Truck_02_fuel_F", [5788.1021, 3145.6848, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_d2fddeabd0cd445c9a3b27d58f3086ad) then {
+		autogen_d2fddeabd0cd445c9a3b27d58f3086ad = createVehicle ["O_Truck_02_fuel_F", [5788.1021, 3145.6848, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_d2fddeabd0cd445c9a3b27d58f3086ad, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_d2fddeabd0cd445c9a3b27d58f3086ad setDir -36.860497;
+	autogen_d2fddeabd0cd445c9a3b27d58f3086ad setUnitAbility 0.60000002;
+	autogen_d2fddeabd0cd445c9a3b27d58f3086ad setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_d2fddeabd0cd445c9a3b27d58f3086ad];
+};
+// end of autogen_d2fddeabd0cd445c9a3b27d58f3086ad
+// begin autogen_9c1b24c2fc2541c7aa8298e271cc11cf, part of group _group_east_18
+if (true) then
+{
+	autogen_9c1b24c2fc2541c7aa8298e271cc11cf = _group_east_18 createUnit ["sfp_btr60", [5802.1421, 3155.8762, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_9c1b24c2fc2541c7aa8298e271cc11cf) then {
+		autogen_9c1b24c2fc2541c7aa8298e271cc11cf = createVehicle ["sfp_btr60", [5802.1421, 3155.8762, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_9c1b24c2fc2541c7aa8298e271cc11cf, _group_east_18] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_9c1b24c2fc2541c7aa8298e271cc11cf setDir -36.8605;
+	autogen_9c1b24c2fc2541c7aa8298e271cc11cf setUnitAbility 0.60000002;
+	autogen_9c1b24c2fc2541c7aa8298e271cc11cf setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_9c1b24c2fc2541c7aa8298e271cc11cf];
+};
+// end of autogen_9c1b24c2fc2541c7aa8298e271cc11cf
+
+/**
+ * Waypoints for group _group_east_18
+ */
+// waypoint #1
+_wp = _group_east_18 addWaypoint[[5769.0132, 3182.51, 0], 0, 1];
+[_group_east_18, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_18, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_18, 1] setWaypointCompletionRadius 0;
+[_group_east_18, 1] setWaypointFormation "NO CHANGE";
+[_group_east_18, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_18, 1] setWaypointStatements["true", ""];
+[_group_east_18, 1] setWaypointType "SUPPORT";
+// group _group_east_19
+_group_east_19 = createGroup _eastHQ;
+// begin autogen_459c0d01fef647f2b1650dd7e871db28, part of group _group_east_19
+if (true) then
+{
+	autogen_459c0d01fef647f2b1650dd7e871db28 = _group_east_19 createUnit ["sfp_wamako_mil_bmp1", [5881.4165, 3177.2517, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_459c0d01fef647f2b1650dd7e871db28) then {
+		autogen_459c0d01fef647f2b1650dd7e871db28 = createVehicle ["sfp_wamako_mil_bmp1", [5881.4165, 3177.2517, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_459c0d01fef647f2b1650dd7e871db28, _group_east_19] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_459c0d01fef647f2b1650dd7e871db28 setDir -36.8605;
+	autogen_459c0d01fef647f2b1650dd7e871db28 setUnitAbility 0.60000002;
+	autogen_459c0d01fef647f2b1650dd7e871db28 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_459c0d01fef647f2b1650dd7e871db28];
+};
+// end of autogen_459c0d01fef647f2b1650dd7e871db28
+// begin autogen_543de5fc8cf74f8a9a40d275c975bc72, part of group _group_east_19
+if (true) then
+{
+	autogen_543de5fc8cf74f8a9a40d275c975bc72 = _group_east_19 createUnit ["sfp_rus_tl", [5887.8892, 3183.6545, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_543de5fc8cf74f8a9a40d275c975bc72) then {
+		autogen_543de5fc8cf74f8a9a40d275c975bc72 = createVehicle ["sfp_rus_tl", [5887.8892, 3183.6545, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_543de5fc8cf74f8a9a40d275c975bc72, _group_east_19] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_543de5fc8cf74f8a9a40d275c975bc72 setDir -36.860497;
+	autogen_543de5fc8cf74f8a9a40d275c975bc72 setUnitAbility 0.60000002;
+	autogen_543de5fc8cf74f8a9a40d275c975bc72 setRank "LIEUTENANT";
+	if(true) then { _group_east_19 selectLeader autogen_543de5fc8cf74f8a9a40d275c975bc72; };
+	_createdUnits = _createdUnits + [autogen_543de5fc8cf74f8a9a40d275c975bc72];
+};
+// end of autogen_543de5fc8cf74f8a9a40d275c975bc72
+// begin autogen_e6e5042248db4a5bbfec15a68869cbc5, part of group _group_east_19
+if (true) then
+{
+	autogen_e6e5042248db4a5bbfec15a68869cbc5 = _group_east_19 createUnit ["sfp_rus_medic", [5892.3101, 3175.5217, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_e6e5042248db4a5bbfec15a68869cbc5) then {
+		autogen_e6e5042248db4a5bbfec15a68869cbc5 = createVehicle ["sfp_rus_medic", [5892.3101, 3175.5217, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_e6e5042248db4a5bbfec15a68869cbc5, _group_east_19] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_e6e5042248db4a5bbfec15a68869cbc5 setDir -36.860497;
+	autogen_e6e5042248db4a5bbfec15a68869cbc5 setUnitAbility 0.60000002;
+	autogen_e6e5042248db4a5bbfec15a68869cbc5 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_e6e5042248db4a5bbfec15a68869cbc5];
+};
+// end of autogen_e6e5042248db4a5bbfec15a68869cbc5
+// begin autogen_a7057d7ee271441686e55fe933206f93, part of group _group_east_19
+if (true) then
+{
+	autogen_a7057d7ee271441686e55fe933206f93 = _group_east_19 createUnit ["sfp_rus_at", [5895.2554, 3178.3157, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_a7057d7ee271441686e55fe933206f93) then {
+		autogen_a7057d7ee271441686e55fe933206f93 = createVehicle ["sfp_rus_at", [5895.2554, 3178.3157, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_a7057d7ee271441686e55fe933206f93, _group_east_19] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_a7057d7ee271441686e55fe933206f93 setDir -36.860497;
+	autogen_a7057d7ee271441686e55fe933206f93 setUnitAbility 0.60000002;
+	autogen_a7057d7ee271441686e55fe933206f93 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_a7057d7ee271441686e55fe933206f93];
+};
+// end of autogen_a7057d7ee271441686e55fe933206f93
+// begin autogen_3e822ee316d148698c99e92e998c8c06, part of group _group_east_19
+if (true) then
+{
+	autogen_3e822ee316d148698c99e92e998c8c06 = _group_east_19 createUnit ["sfp_rus_machinegunner", [5894.3042, 3182.3533, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_3e822ee316d148698c99e92e998c8c06) then {
+		autogen_3e822ee316d148698c99e92e998c8c06 = createVehicle ["sfp_rus_machinegunner", [5894.3042, 3182.3533, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_3e822ee316d148698c99e92e998c8c06, _group_east_19] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_3e822ee316d148698c99e92e998c8c06 setDir -36.860497;
+	autogen_3e822ee316d148698c99e92e998c8c06 setUnitAbility 0.60000002;
+	autogen_3e822ee316d148698c99e92e998c8c06 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_3e822ee316d148698c99e92e998c8c06];
+};
+// end of autogen_3e822ee316d148698c99e92e998c8c06
+// begin autogen_878939a54ffb4fe2b25bdb6706dd34b4, part of group _group_east_19
+if (true) then
+{
+	autogen_878939a54ffb4fe2b25bdb6706dd34b4 = _group_east_19 createUnit ["sfp_rus_aa", [5893.9595, 3185.5881, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_878939a54ffb4fe2b25bdb6706dd34b4) then {
+		autogen_878939a54ffb4fe2b25bdb6706dd34b4 = createVehicle ["sfp_rus_aa", [5893.9595, 3185.5881, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_878939a54ffb4fe2b25bdb6706dd34b4, _group_east_19] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_878939a54ffb4fe2b25bdb6706dd34b4 setDir -36.860497;
+	autogen_878939a54ffb4fe2b25bdb6706dd34b4 setUnitAbility 0.60000002;
+	autogen_878939a54ffb4fe2b25bdb6706dd34b4 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_878939a54ffb4fe2b25bdb6706dd34b4];
+};
+// end of autogen_878939a54ffb4fe2b25bdb6706dd34b4
+// begin autogen_7ee7fd3458804ce9b276e146c62644c7, part of group _group_east_19
+if (true) then
+{
+	autogen_7ee7fd3458804ce9b276e146c62644c7 = _group_east_19 createUnit ["sfp_rus_rifleman", [5889.1938, 3178.3752, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_7ee7fd3458804ce9b276e146c62644c7) then {
+		autogen_7ee7fd3458804ce9b276e146c62644c7 = createVehicle ["sfp_rus_rifleman", [5889.1938, 3178.3752, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_7ee7fd3458804ce9b276e146c62644c7, _group_east_19] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_7ee7fd3458804ce9b276e146c62644c7 setDir -36.860497;
+	autogen_7ee7fd3458804ce9b276e146c62644c7 setUnitAbility 0.60000002;
+	autogen_7ee7fd3458804ce9b276e146c62644c7 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_7ee7fd3458804ce9b276e146c62644c7];
+};
+// end of autogen_7ee7fd3458804ce9b276e146c62644c7
+
+/**
+ * Waypoints for group _group_east_19
+ */
+// waypoint #1
+_wp = _group_east_19 addWaypoint[[5881.6665, 3191.9382, 0], 0, 1];
+[_group_east_19, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_19, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_19, 1] setWaypointCompletionRadius 0;
+[_group_east_19, 1] setWaypointFormation "NO CHANGE";
+[_group_east_19, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_19, 1] setWaypointStatements["true", ""];
+// group _group_east_20
+_group_east_20 = createGroup _eastHQ;
+// begin autogen_1d0ad18b4681453fb26ccbe2adb90164, part of group _group_east_20
+if (true) then
+{
+	autogen_1d0ad18b4681453fb26ccbe2adb90164 = _group_east_20 createUnit ["sfp_t72", [5721.7451, 3182.592, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_1d0ad18b4681453fb26ccbe2adb90164) then {
+		autogen_1d0ad18b4681453fb26ccbe2adb90164 = createVehicle ["sfp_t72", [5721.7451, 3182.592, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_1d0ad18b4681453fb26ccbe2adb90164, _group_east_20] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_1d0ad18b4681453fb26ccbe2adb90164 setDir 34.511528;
+	autogen_1d0ad18b4681453fb26ccbe2adb90164 setUnitAbility 0.60000002;
+	autogen_1d0ad18b4681453fb26ccbe2adb90164 setRank "PRIVATE";
+	if(true) then { _group_east_20 selectLeader autogen_1d0ad18b4681453fb26ccbe2adb90164; };
+	_createdUnits = _createdUnits + [autogen_1d0ad18b4681453fb26ccbe2adb90164];
+};
+// end of autogen_1d0ad18b4681453fb26ccbe2adb90164
+// begin autogen_a9c7412981064b45be65851e262244af, part of group _group_east_20
+if (true) then
+{
+	autogen_a9c7412981064b45be65851e262244af = _group_east_20 createUnit ["sfp_t72", [5702.9092, 3194.2917, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_a9c7412981064b45be65851e262244af) then {
+		autogen_a9c7412981064b45be65851e262244af = createVehicle ["sfp_t72", [5702.9092, 3194.2917, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_a9c7412981064b45be65851e262244af, _group_east_20] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_a9c7412981064b45be65851e262244af setDir 34.511501;
+	autogen_a9c7412981064b45be65851e262244af setUnitAbility 0.60000002;
+	autogen_a9c7412981064b45be65851e262244af setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_a9c7412981064b45be65851e262244af];
+};
+// end of autogen_a9c7412981064b45be65851e262244af
+// begin autogen_727d032f4c8646bda2e08d3a46d0a984, part of group _group_east_20
+if (true) then
+{
+	autogen_727d032f4c8646bda2e08d3a46d0a984 = _group_east_20 createUnit ["sfp_t72", [5731.9326, 3175.5876, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_727d032f4c8646bda2e08d3a46d0a984) then {
+		autogen_727d032f4c8646bda2e08d3a46d0a984 = createVehicle ["sfp_t72", [5731.9326, 3175.5876, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_727d032f4c8646bda2e08d3a46d0a984, _group_east_20] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_727d032f4c8646bda2e08d3a46d0a984 setDir 34.511528;
+	autogen_727d032f4c8646bda2e08d3a46d0a984 setUnitAbility 0.60000002;
+	autogen_727d032f4c8646bda2e08d3a46d0a984 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_727d032f4c8646bda2e08d3a46d0a984];
+};
+// end of autogen_727d032f4c8646bda2e08d3a46d0a984
+
+/**
+ * Waypoints for group _group_east_20
+ */
+// waypoint #1
+_wp = _group_east_20 addWaypoint[[5735.501, 3211.0002, 0], 0, 1];
+[_group_east_20, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_20, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_20, 1] setWaypointCompletionRadius 0;
+[_group_east_20, 1] setWaypointFormation "COLUMN";
+[_group_east_20, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_20, 1] setWaypointStatements["true", ""];
+[_group_east_20, 1] setWaypointType "GUARD";
+// group _group_east_21
+_group_east_21 = createGroup _eastHQ;
+// begin autogen_f5fc452b9cc1461481a556f2e97a3cb2, part of group _group_east_21
+if (true) then
+{
+	autogen_f5fc452b9cc1461481a556f2e97a3cb2 = _group_east_21 createUnit ["O_Truck_02_fuel_F", [5735.106, 3138.6858, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_f5fc452b9cc1461481a556f2e97a3cb2) then {
+		autogen_f5fc452b9cc1461481a556f2e97a3cb2 = createVehicle ["O_Truck_02_fuel_F", [5735.106, 3138.6858, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_f5fc452b9cc1461481a556f2e97a3cb2, _group_east_21] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_f5fc452b9cc1461481a556f2e97a3cb2 setDir -400.29016;
+	autogen_f5fc452b9cc1461481a556f2e97a3cb2 setUnitAbility 0.60000002;
+	autogen_f5fc452b9cc1461481a556f2e97a3cb2 setRank "LIEUTENANT";
+	if(true) then { _group_east_21 selectLeader autogen_f5fc452b9cc1461481a556f2e97a3cb2; };
+	_createdUnits = _createdUnits + [autogen_f5fc452b9cc1461481a556f2e97a3cb2];
+};
+// end of autogen_f5fc452b9cc1461481a556f2e97a3cb2
+
+/**
+ * Waypoints for group _group_east_21
+ */
+// waypoint #1
+_wp = _group_east_21 addWaypoint[[5725.1636, 3147.9807, 0], 0, 1];
+[_group_east_21, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_21, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_21, 1] setWaypointCompletionRadius 0;
+[_group_east_21, 1] setWaypointFormation "NO CHANGE";
+[_group_east_21, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_21, 1] setWaypointStatements["true", ""];
+[_group_east_21, 1] setWaypointType "SUPPORT";
+// group _group_east_22
+_group_east_22 = createGroup _eastHQ;
+// begin autogen_87de59ed41464ec8a74924cff7d4120f, part of group _group_east_22
+if (true) then
+{
+	autogen_87de59ed41464ec8a74924cff7d4120f = _group_east_22 createUnit ["O_Truck_02_box_F", [5719.4038, 3124.9495, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_87de59ed41464ec8a74924cff7d4120f) then {
+		autogen_87de59ed41464ec8a74924cff7d4120f = createVehicle ["O_Truck_02_box_F", [5719.4038, 3124.9495, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_87de59ed41464ec8a74924cff7d4120f, _group_east_22] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_87de59ed41464ec8a74924cff7d4120f setDir -400.29016;
+	autogen_87de59ed41464ec8a74924cff7d4120f setUnitAbility 0.60000002;
+	autogen_87de59ed41464ec8a74924cff7d4120f setRank "LIEUTENANT";
+	if(true) then { _group_east_22 selectLeader autogen_87de59ed41464ec8a74924cff7d4120f; };
+	_createdUnits = _createdUnits + [autogen_87de59ed41464ec8a74924cff7d4120f];
+};
+// end of autogen_87de59ed41464ec8a74924cff7d4120f
+
+/**
+ * Waypoints for group _group_east_22
+ */
+// waypoint #1
+_wp = _group_east_22 addWaypoint[[5710.8677, 3134.8455, 0], 0, 1];
+[_group_east_22, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_22, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_22, 1] setWaypointCompletionRadius 0;
+[_group_east_22, 1] setWaypointFormation "NO CHANGE";
+[_group_east_22, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_22, 1] setWaypointStatements["true", ""];
+[_group_east_22, 1] setWaypointType "SUPPORT";
+// group _group_east_23
+_group_east_23 = createGroup _eastHQ;
+// begin autogen_851e180c813a4d778eb256017e2a4d6c, part of group _group_east_23
+if (true) then
+{
+	autogen_851e180c813a4d778eb256017e2a4d6c = _group_east_23 createUnit ["O_Truck_02_Ammo_F", [5727.8472, 3130.9934, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_851e180c813a4d778eb256017e2a4d6c) then {
+		autogen_851e180c813a4d778eb256017e2a4d6c = createVehicle ["O_Truck_02_Ammo_F", [5727.8472, 3130.9934, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_851e180c813a4d778eb256017e2a4d6c, _group_east_23] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_851e180c813a4d778eb256017e2a4d6c setDir -400.29016;
+	autogen_851e180c813a4d778eb256017e2a4d6c setUnitAbility 0.60000002;
+	autogen_851e180c813a4d778eb256017e2a4d6c setRank "LIEUTENANT";
+	if(true) then { _group_east_23 selectLeader autogen_851e180c813a4d778eb256017e2a4d6c; };
+	_createdUnits = _createdUnits + [autogen_851e180c813a4d778eb256017e2a4d6c];
+};
+// end of autogen_851e180c813a4d778eb256017e2a4d6c
+
+/**
+ * Waypoints for group _group_east_23
+ */
+// waypoint #1
+_wp = _group_east_23 addWaypoint[[5717.4624, 3141.6897, 0], 0, 1];
+[_group_east_23, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_23, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_23, 1] setWaypointCompletionRadius 0;
+[_group_east_23, 1] setWaypointFormation "NO CHANGE";
+[_group_east_23, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_23, 1] setWaypointStatements["true", ""];
+[_group_east_23, 1] setWaypointType "SUPPORT";
+// group _group_east_24
+_group_east_24 = createGroup _eastHQ;
+// begin autogen_3abd8d82703e49a6b2b359120a8c04b5, part of group _group_east_24
+if (true) then
+{
+	autogen_3abd8d82703e49a6b2b359120a8c04b5 = _group_east_24 createUnit ["sfp_rus_medic", [5751.8345, 3136.9587, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_3abd8d82703e49a6b2b359120a8c04b5) then {
+		autogen_3abd8d82703e49a6b2b359120a8c04b5 = createVehicle ["sfp_rus_medic", [5751.8345, 3136.9587, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_3abd8d82703e49a6b2b359120a8c04b5, _group_east_24] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_3abd8d82703e49a6b2b359120a8c04b5 setDir -36.860497;
+	autogen_3abd8d82703e49a6b2b359120a8c04b5 setUnitAbility 0.60000002;
+	autogen_3abd8d82703e49a6b2b359120a8c04b5 setRank "SERGEANT";
+	if(true) then { _group_east_24 selectLeader autogen_3abd8d82703e49a6b2b359120a8c04b5; };
+	_createdUnits = _createdUnits + [autogen_3abd8d82703e49a6b2b359120a8c04b5];
+};
+// end of autogen_3abd8d82703e49a6b2b359120a8c04b5
+// begin autogen_24bdba842f5040a39b4de09ed195909d, part of group _group_east_24
+if (true) then
+{
+	autogen_24bdba842f5040a39b4de09ed195909d = _group_east_24 createUnit ["sfp_uaz", [5754.9048, 3140.8811, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_24bdba842f5040a39b4de09ed195909d) then {
+		autogen_24bdba842f5040a39b4de09ed195909d = createVehicle ["sfp_uaz", [5754.9048, 3140.8811, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_24bdba842f5040a39b4de09ed195909d, _group_east_24] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_24bdba842f5040a39b4de09ed195909d setDir -36.860497;
+	autogen_24bdba842f5040a39b4de09ed195909d setUnitAbility 0.60000002;
+	autogen_24bdba842f5040a39b4de09ed195909d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_24bdba842f5040a39b4de09ed195909d];
+};
+// end of autogen_24bdba842f5040a39b4de09ed195909d
+// begin autogen_c9ae842665b4405fa80522d1534d80c8, part of group _group_east_24
+if (true) then
+{
+	autogen_c9ae842665b4405fa80522d1534d80c8 = _group_east_24 createUnit ["sfp_rus_medic", [5747.9985, 3133.5637, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_c9ae842665b4405fa80522d1534d80c8) then {
+		autogen_c9ae842665b4405fa80522d1534d80c8 = createVehicle ["sfp_rus_medic", [5747.9985, 3133.5637, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_c9ae842665b4405fa80522d1534d80c8, _group_east_24] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_c9ae842665b4405fa80522d1534d80c8 setDir -36.860497;
+	autogen_c9ae842665b4405fa80522d1534d80c8 setUnitAbility 0.60000002;
+	autogen_c9ae842665b4405fa80522d1534d80c8 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_c9ae842665b4405fa80522d1534d80c8];
+};
+// end of autogen_c9ae842665b4405fa80522d1534d80c8
+
+/**
+ * Waypoints for group _group_east_24
+ */
+// waypoint #1
+_wp = _group_east_24 addWaypoint[[5746.3931, 3142.5183, 0], 0, 1];
+[_group_east_24, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_24, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_24, 1] setWaypointCompletionRadius 0;
+[_group_east_24, 1] setWaypointFormation "NO CHANGE";
+[_group_east_24, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_24, 1] setWaypointStatements["true", ""];
+[_group_east_24, 1] setWaypointType "SUPPORT";
+// group _group_east_25
+_group_east_25 = createGroup _eastHQ;
+// begin autogen_0fd2230ed1d44c589bd8fe615e45ed3b, part of group _group_east_25
+if (true) then
+{
+	autogen_0fd2230ed1d44c589bd8fe615e45ed3b = _group_east_25 createUnit ["sfp_btr60", [5795.1182, 2964.4861, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_0fd2230ed1d44c589bd8fe615e45ed3b) then {
+		autogen_0fd2230ed1d44c589bd8fe615e45ed3b = createVehicle ["sfp_btr60", [5795.1182, 2964.4861, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_0fd2230ed1d44c589bd8fe615e45ed3b, _group_east_25] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_0fd2230ed1d44c589bd8fe615e45ed3b setDir -36.860497;
+	autogen_0fd2230ed1d44c589bd8fe615e45ed3b setUnitAbility 0.60000002;
+	autogen_0fd2230ed1d44c589bd8fe615e45ed3b setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_0fd2230ed1d44c589bd8fe615e45ed3b];
+};
+// end of autogen_0fd2230ed1d44c589bd8fe615e45ed3b
+// begin autogen_715f20daae3a47ada9a6583340135809, part of group _group_east_25
+if (true) then
+{
+	autogen_715f20daae3a47ada9a6583340135809 = _group_east_25 createUnit ["sfp_rus_tl", [5801.5918, 2970.8904, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_715f20daae3a47ada9a6583340135809) then {
+		autogen_715f20daae3a47ada9a6583340135809 = createVehicle ["sfp_rus_tl", [5801.5918, 2970.8904, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_715f20daae3a47ada9a6583340135809, _group_east_25] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_715f20daae3a47ada9a6583340135809 setDir -36.860497;
+	autogen_715f20daae3a47ada9a6583340135809 setUnitAbility 0.60000002;
+	autogen_715f20daae3a47ada9a6583340135809 setRank "LIEUTENANT";
+	if(true) then { _group_east_25 selectLeader autogen_715f20daae3a47ada9a6583340135809; };
+	_createdUnits = _createdUnits + [autogen_715f20daae3a47ada9a6583340135809];
+};
+// end of autogen_715f20daae3a47ada9a6583340135809
+// begin autogen_999bd8ac17e94c2a9ac2625b6ede5b82, part of group _group_east_25
+if (true) then
+{
+	autogen_999bd8ac17e94c2a9ac2625b6ede5b82 = _group_east_25 createUnit ["sfp_rus_medic", [5806.0107, 2962.7595, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_999bd8ac17e94c2a9ac2625b6ede5b82) then {
+		autogen_999bd8ac17e94c2a9ac2625b6ede5b82 = createVehicle ["sfp_rus_medic", [5806.0107, 2962.7595, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_999bd8ac17e94c2a9ac2625b6ede5b82, _group_east_25] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_999bd8ac17e94c2a9ac2625b6ede5b82 setDir -36.860497;
+	autogen_999bd8ac17e94c2a9ac2625b6ede5b82 setUnitAbility 0.60000002;
+	autogen_999bd8ac17e94c2a9ac2625b6ede5b82 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_999bd8ac17e94c2a9ac2625b6ede5b82];
+};
+// end of autogen_999bd8ac17e94c2a9ac2625b6ede5b82
+// begin autogen_d46eaa524f59450aa69e58f575b871b9, part of group _group_east_25
+if (true) then
+{
+	autogen_d46eaa524f59450aa69e58f575b871b9 = _group_east_25 createUnit ["sfp_rus_at", [5808.9561, 2965.5496, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_d46eaa524f59450aa69e58f575b871b9) then {
+		autogen_d46eaa524f59450aa69e58f575b871b9 = createVehicle ["sfp_rus_at", [5808.9561, 2965.5496, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_d46eaa524f59450aa69e58f575b871b9, _group_east_25] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_d46eaa524f59450aa69e58f575b871b9 setDir -36.860497;
+	autogen_d46eaa524f59450aa69e58f575b871b9 setUnitAbility 0.60000002;
+	autogen_d46eaa524f59450aa69e58f575b871b9 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_d46eaa524f59450aa69e58f575b871b9];
+};
+// end of autogen_d46eaa524f59450aa69e58f575b871b9
+// begin autogen_3de76f218c6449e8bcbd6c51609c526d, part of group _group_east_25
+if (true) then
+{
+	autogen_3de76f218c6449e8bcbd6c51609c526d = _group_east_25 createUnit ["sfp_rus_machinegunner", [5808.0059, 2969.595, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_3de76f218c6449e8bcbd6c51609c526d) then {
+		autogen_3de76f218c6449e8bcbd6c51609c526d = createVehicle ["sfp_rus_machinegunner", [5808.0059, 2969.595, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_3de76f218c6449e8bcbd6c51609c526d, _group_east_25] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_3de76f218c6449e8bcbd6c51609c526d setDir -36.860497;
+	autogen_3de76f218c6449e8bcbd6c51609c526d setUnitAbility 0.60000002;
+	autogen_3de76f218c6449e8bcbd6c51609c526d setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_3de76f218c6449e8bcbd6c51609c526d];
+};
+// end of autogen_3de76f218c6449e8bcbd6c51609c526d
+// begin autogen_f659f615f14343839cc8de12cb6b0e07, part of group _group_east_25
+if (true) then
+{
+	autogen_f659f615f14343839cc8de12cb6b0e07 = _group_east_25 createUnit ["sfp_rus_rifleman", [5807.6611, 2972.8235, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_f659f615f14343839cc8de12cb6b0e07) then {
+		autogen_f659f615f14343839cc8de12cb6b0e07 = createVehicle ["sfp_rus_rifleman", [5807.6611, 2972.8235, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_f659f615f14343839cc8de12cb6b0e07, _group_east_25] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_f659f615f14343839cc8de12cb6b0e07 setDir -36.860497;
+	autogen_f659f615f14343839cc8de12cb6b0e07 setUnitAbility 0.60000002;
+	autogen_f659f615f14343839cc8de12cb6b0e07 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_f659f615f14343839cc8de12cb6b0e07];
+};
+// end of autogen_f659f615f14343839cc8de12cb6b0e07
+// begin autogen_68c224394b534f22b9d795f9423fc42b, part of group _group_east_25
+if (true) then
+{
+	autogen_68c224394b534f22b9d795f9423fc42b = _group_east_25 createUnit ["sfp_rus_rifleman", [5802.8955, 2965.6111, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_68c224394b534f22b9d795f9423fc42b) then {
+		autogen_68c224394b534f22b9d795f9423fc42b = createVehicle ["sfp_rus_rifleman", [5802.8955, 2965.6111, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_68c224394b534f22b9d795f9423fc42b, _group_east_25] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_68c224394b534f22b9d795f9423fc42b setDir -36.860497;
+	autogen_68c224394b534f22b9d795f9423fc42b setUnitAbility 0.60000002;
+	autogen_68c224394b534f22b9d795f9423fc42b setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_68c224394b534f22b9d795f9423fc42b];
+};
+// end of autogen_68c224394b534f22b9d795f9423fc42b
+
+/**
+ * Waypoints for group _group_east_25
+ */
+// waypoint #1
+_wp = _group_east_25 addWaypoint[[5791.5176, 2971.7512, 0], 0, 1];
+[_group_east_25, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_25, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_25, 1] setWaypointCompletionRadius 0;
+[_group_east_25, 1] setWaypointFormation "NO CHANGE";
+[_group_east_25, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_25, 1] setWaypointStatements["true", ""];
+[_group_east_25, 1] setWaypointType "GUARD";
+// group _group_east_26
+_group_east_26 = createGroup _eastHQ;
+// begin autogen_e2f5867b5ca048bda302f7abc114e742, part of group _group_east_26
+if (true) then
+{
+	autogen_e2f5867b5ca048bda302f7abc114e742 = _group_east_26 createUnit ["sfp_btr60", [5540.8784, 3053.5764, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_e2f5867b5ca048bda302f7abc114e742) then {
+		autogen_e2f5867b5ca048bda302f7abc114e742 = createVehicle ["sfp_btr60", [5540.8784, 3053.5764, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_e2f5867b5ca048bda302f7abc114e742, _group_east_26] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_e2f5867b5ca048bda302f7abc114e742 setDir -36.860497;
+	autogen_e2f5867b5ca048bda302f7abc114e742 setUnitAbility 0.60000002;
+	autogen_e2f5867b5ca048bda302f7abc114e742 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_e2f5867b5ca048bda302f7abc114e742];
+};
+// end of autogen_e2f5867b5ca048bda302f7abc114e742
+// begin autogen_9fff908ef0fd4625ade38a470cf28991, part of group _group_east_26
+if (true) then
+{
+	autogen_9fff908ef0fd4625ade38a470cf28991 = _group_east_26 createUnit ["sfp_rus_tl", [5547.3491, 3059.9802, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_9fff908ef0fd4625ade38a470cf28991) then {
+		autogen_9fff908ef0fd4625ade38a470cf28991 = createVehicle ["sfp_rus_tl", [5547.3491, 3059.9802, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_9fff908ef0fd4625ade38a470cf28991, _group_east_26] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_9fff908ef0fd4625ade38a470cf28991 setDir -36.860497;
+	autogen_9fff908ef0fd4625ade38a470cf28991 setUnitAbility 0.60000002;
+	autogen_9fff908ef0fd4625ade38a470cf28991 setRank "LIEUTENANT";
+	if(true) then { _group_east_26 selectLeader autogen_9fff908ef0fd4625ade38a470cf28991; };
+	_createdUnits = _createdUnits + [autogen_9fff908ef0fd4625ade38a470cf28991];
+};
+// end of autogen_9fff908ef0fd4625ade38a470cf28991
+// begin autogen_3a5b315ecb454724b7b962036a1ba3cc, part of group _group_east_26
+if (true) then
+{
+	autogen_3a5b315ecb454724b7b962036a1ba3cc = _group_east_26 createUnit ["sfp_rus_medic", [5551.7681, 3051.8513, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_3a5b315ecb454724b7b962036a1ba3cc) then {
+		autogen_3a5b315ecb454724b7b962036a1ba3cc = createVehicle ["sfp_rus_medic", [5551.7681, 3051.8513, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_3a5b315ecb454724b7b962036a1ba3cc, _group_east_26] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_3a5b315ecb454724b7b962036a1ba3cc setDir -36.860497;
+	autogen_3a5b315ecb454724b7b962036a1ba3cc setUnitAbility 0.60000002;
+	autogen_3a5b315ecb454724b7b962036a1ba3cc setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_3a5b315ecb454724b7b962036a1ba3cc];
+};
+// end of autogen_3a5b315ecb454724b7b962036a1ba3cc
+// begin autogen_005ba02cf9294fb7a1bac4b2042daa31, part of group _group_east_26
+if (true) then
+{
+	autogen_005ba02cf9294fb7a1bac4b2042daa31 = _group_east_26 createUnit ["sfp_rus_at", [5554.7173, 3054.6404, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_005ba02cf9294fb7a1bac4b2042daa31) then {
+		autogen_005ba02cf9294fb7a1bac4b2042daa31 = createVehicle ["sfp_rus_at", [5554.7173, 3054.6404, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_005ba02cf9294fb7a1bac4b2042daa31, _group_east_26] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_005ba02cf9294fb7a1bac4b2042daa31 setDir -36.860497;
+	autogen_005ba02cf9294fb7a1bac4b2042daa31 setUnitAbility 0.60000002;
+	autogen_005ba02cf9294fb7a1bac4b2042daa31 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_005ba02cf9294fb7a1bac4b2042daa31];
+};
+// end of autogen_005ba02cf9294fb7a1bac4b2042daa31
+// begin autogen_de4237de59ed48ab89fbbeb81b3c8c2b, part of group _group_east_26
+if (true) then
+{
+	autogen_de4237de59ed48ab89fbbeb81b3c8c2b = _group_east_26 createUnit ["sfp_rus_machinegunner", [5553.7642, 3058.6819, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_de4237de59ed48ab89fbbeb81b3c8c2b) then {
+		autogen_de4237de59ed48ab89fbbeb81b3c8c2b = createVehicle ["sfp_rus_machinegunner", [5553.7642, 3058.6819, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_de4237de59ed48ab89fbbeb81b3c8c2b, _group_east_26] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_de4237de59ed48ab89fbbeb81b3c8c2b setDir -36.860497;
+	autogen_de4237de59ed48ab89fbbeb81b3c8c2b setUnitAbility 0.60000002;
+	autogen_de4237de59ed48ab89fbbeb81b3c8c2b setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_de4237de59ed48ab89fbbeb81b3c8c2b];
+};
+// end of autogen_de4237de59ed48ab89fbbeb81b3c8c2b
+// begin autogen_4dc7a1c9cce241299725c658f1c86653, part of group _group_east_26
+if (true) then
+{
+	autogen_4dc7a1c9cce241299725c658f1c86653 = _group_east_26 createUnit ["sfp_rus_rifleman", [5553.4185, 3061.9163, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_4dc7a1c9cce241299725c658f1c86653) then {
+		autogen_4dc7a1c9cce241299725c658f1c86653 = createVehicle ["sfp_rus_rifleman", [5553.4185, 3061.9163, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_4dc7a1c9cce241299725c658f1c86653, _group_east_26] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_4dc7a1c9cce241299725c658f1c86653 setDir -36.860497;
+	autogen_4dc7a1c9cce241299725c658f1c86653 setUnitAbility 0.60000002;
+	autogen_4dc7a1c9cce241299725c658f1c86653 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_4dc7a1c9cce241299725c658f1c86653];
+};
+// end of autogen_4dc7a1c9cce241299725c658f1c86653
+// begin autogen_3c06cc4ea13a4e84aae7f8ca93952e74, part of group _group_east_26
+if (true) then
+{
+	autogen_3c06cc4ea13a4e84aae7f8ca93952e74 = _group_east_26 createUnit ["sfp_rus_rifleman", [5548.6548, 3054.7009, 0], [], 0, "CAN_COLLIDE"];
+
+	// this is VERY dirty and only used because I don't want to create
+	// arrays for vehicles, units and stuff to check if the classname
+	// is a vehicle, an unit, and so on. this just works.
+	// what it does is if the unit is not alive after creation (because it should be a manned vehicle)
+	// it will be created with createVehicle and manned with the BIS_fnc_spawnCrew function.
+	if(!alive autogen_3c06cc4ea13a4e84aae7f8ca93952e74) then {
+		autogen_3c06cc4ea13a4e84aae7f8ca93952e74 = createVehicle ["sfp_rus_rifleman", [5548.6548, 3054.7009, 0], [], 0, "CAN_COLLIDE"];
+		[autogen_3c06cc4ea13a4e84aae7f8ca93952e74, _group_east_26] call BIS_fnc_spawnCrew;
+	};
+
+	autogen_3c06cc4ea13a4e84aae7f8ca93952e74 setDir -36.860497;
+	autogen_3c06cc4ea13a4e84aae7f8ca93952e74 setUnitAbility 0.60000002;
+	autogen_3c06cc4ea13a4e84aae7f8ca93952e74 setRank "PRIVATE";
+	_createdUnits = _createdUnits + [autogen_3c06cc4ea13a4e84aae7f8ca93952e74];
+};
+// end of autogen_3c06cc4ea13a4e84aae7f8ca93952e74
+
+/**
+ * Waypoints for group _group_east_26
+ */
+// waypoint #1
+_wp = _group_east_26 addWaypoint[[5535.0059, 3104.4001, 0], 0, 1];
+[_group_east_26, 1] setWaypointBehaviour "UNCHANGED";
+[_group_east_26, 1] setWaypointCombatMode "NO CHANGE";
+[_group_east_26, 1] setWaypointCompletionRadius 0;
+[_group_east_26, 1] setWaypointFormation "NO CHANGE";
+[_group_east_26, 1] setWaypointSpeed "UNCHANGED";
+[_group_east_26, 1] setWaypointStatements["true", ""];
+// waypoint #2
+_wp = _group_east_26 addWaypoint[[5536.8003, 3153.2339, 0], 0, 2];
+[_group_east_26, 2] setWaypointBehaviour "UNCHANGED";
+[_group_east_26, 2] setWaypointCombatMode "NO CHANGE";
+[_group_east_26, 2] setWaypointCompletionRadius 0;
+[_group_east_26, 2] setWaypointFormation "NO CHANGE";
+[_group_east_26, 2] setWaypointSpeed "UNCHANGED";
+[_group_east_26, 2] setWaypointStatements["true", ""];
+[_group_east_26, 2] setWaypointType "GUARD";
+
+/********************
+ * TRIGGER CREATION *
+ ********************/
+
+// return all created units in an array
+[_createdUnits, _createdMarkers, _createdTriggers]

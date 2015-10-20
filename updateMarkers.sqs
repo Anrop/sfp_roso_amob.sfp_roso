@@ -1,0 +1,13 @@
+Hint "Mobilization storages marked on map";
+
+"mk_adam" setMarkerTypeLocal "mil_start";
+"mk_adam" setMarkerTextLocal "Mobfrd Adam";
+"mk_bertil" setMarkerTypeLocal "mil_start";
+"mk_bertil" setMarkerTextLocal "Mobfrd Bertil";
+"mk_ceasar" setMarkerTypeLocal "mil_start";
+"mk_ceasar" setMarkerTextLocal "Mobfrd Ceasar";
+
+ 
+
+sub_units_at_gpl = sub_units_at_gpl + [vehiclevarname player];
+publicvariable "sub_units_at_gpl";

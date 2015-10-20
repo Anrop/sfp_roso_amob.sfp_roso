@@ -1,0 +1,40 @@
+class Header
+{
+  gameType = Coop;
+  minPlayers = 1;
+  maxPlayers = 25;
+};
+author="subroc";
+loadScreen = "amob_co.paa";
+overviewtext ="Ivan is invading, its time to protect our home!";
+overviewPicture = "amob_co.paa";
+
+onLoadMission="A-Mob";
+onLoadIntro="";
+onLoadIntroTime = false;
+onLoadMissionTime = false;
+respawn = "BASE";
+respawndelay = 30;
+disabledAI = 1;
+
+class Params
+{
+  class DayTime //paramsArray[0]
+  {
+    title = "Local Time";
+    values[] = {0,3 4,6, 8,12, 16, 21};
+    texts[] = {"0000HRS","0300HRS","0400HRS","0600HRS","0800HRS","1200HRS", "1600HRS", "2100HRS"};
+    default = 4;
+  };
+};
+
+class CfgSounds
+{
+	class radiobroadcast
+	{
+		name = "";
+		sound[] = {"\sound\radiobroadcast.ogg", 2, 1};
+		titles[] = {};
+	};
+};
+
